@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="{{ site.lang | default: 'en-GB' }}">
 {% include head.html %}
-<body>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
   <a class="skip-link" href="#main">Skip to content</a>
   {% include header.html %}
   <main id="main">{{ content }}</main>

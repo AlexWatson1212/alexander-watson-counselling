@@ -1,10 +1,15 @@
 title: Alexander Watson Counselling
 description: Thoughtful, person-centred counselling in Greater Manchester and online.
-url: ""
+url: https://alexanderwatsoncounselling.co.uk
 baseurl: ""
-permalink: pretty
+lang: en-GB
+timezone: Europe/London
+
 markdown: kramdown
-plugins: []
+permalink: pretty
+
 exclude:
   - README.md
   - docs
+  - Gemfile
+  - Gemfile.lock

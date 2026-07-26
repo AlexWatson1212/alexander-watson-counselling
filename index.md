@@ -97,11 +97,13 @@
   <p class="eyebrow">About Alexander</p>
   <h2 id="about-preview-title">Counselling that is thoughtful, collaborative and human.</h2>
   <p>My way of working is calm and considered. I listen closely, ask useful questions and help you see patterns that can be difficult to recognise from inside them.</p>
+
   <ul class="trust-list" aria-label="What you can expect">
     <li>Space to think without being rushed</li>
     <li>Honest, considered reflection</li>
     <li>A collaborative pace rather than instructions</li>
   </ul>
+
   <a class="text-link" href="{{ '/about/' | relative_url }}">More about me and how I work</a>
 </div>
 </div>

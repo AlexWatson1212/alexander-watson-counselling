@@ -23,19 +23,13 @@
     <nav id="site-navigation" class="site-nav" aria-label="Primary navigation" data-site-navigation>
       <ul class="nav-list">
         {% assign navigation_items = site.data.navigation %}
-        {% if navigation_items and navigation_items.size > 0 %}
-          {% for item in navigation_items %}
-          <li>
-            <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
-          </li>
-          {% endfor %}
-        {% else %}
-          <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
-          <li><a href="{{ '/support/' | relative_url }}"{% if page.url == '/support/' %} aria-current="page"{% endif %}>Support</a></li>
-          <li><a href="{{ '/approach/' | relative_url }}"{% if page.url == '/approach/' %} aria-current="page"{% endif %}>Approach</a></li>
-          <li><a href="{{ '/working-together/' | relative_url }}"{% if page.url == '/working-together/' %} aria-current="page"{% endif %}>Working together</a></li>
-          <li><a href="{{ '/fees/' | relative_url }}"{% if page.url == '/fees/' %} aria-current="page"{% endif %}>Fees</a></li>
-        {% endif %}
+        {% for item in navigation_items %}
+        <li>
+          <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+            {{ item.label }}
+          </a>
+        </li>
+        {% endfor %}
       </ul>
 
       <div class="nav-actions">
