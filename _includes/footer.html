@@ -1,56 +1,8 @@
-<section class="crisis-strip" aria-labelledby="urgent-support-title">
-  <div class="shell crisis-grid">
-    <div>
-      <p class="eyebrow eyebrow-light">Urgent support</p>
-      <h2 id="urgent-support-title">This practice is not an emergency service.</h2>
-    </div>
-    <p>If you or someone else is in immediate danger, call <strong>999</strong> or go to A&amp;E. For urgent mental health help that is not an emergency, use NHS 111 online or call 111 and select the mental health option. Samaritans are available free on <strong>116 123</strong>.</p>
-  </div>
-</section>
-
 <footer class="site-footer">
   <div class="shell footer-grid">
-    <div class="footer-intro">
-      <a class="brand brand-footer" href="{{ '/' | relative_url }}">
-        <span class="brand-mark" aria-hidden="true">MD</span>
-        <span class="brand-copy">
-          <span class="brand-name">Michael Doe</span>
-          <span class="brand-discipline">Counselling</span>
-        </span>
-      </a>
-      <p>Calm, relational counselling for adults in Stockport and online.</p>
-    </div>
-
-    <div>
-      <p class="footer-heading">Explore</p>
-      <ul class="footer-links">
-        <li><a href="{{ '/support/' | relative_url }}">Support</a></li>
-        <li><a href="{{ '/how-i-work/' | relative_url }}">How it works</a></li>
-        <li><a href="{{ '/first-session/' | relative_url }}">First session</a></li>
-        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-heading">Contact</p>
-      <ul class="footer-links">
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        <li><a href="tel:+441610000000">{{ site.phone }}</a></li>
-        <li>{{ site.location }}</li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-heading">Information</p>
-      <ul class="footer-links">
-        <li><a href="{{ '/privacy/' | relative_url }}">Privacy</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">Enquiries</a></li>
-      </ul>
-    </div>
+    <div><p class="eyebrow">Alexander Watson Counselling</p><p>Thoughtful counselling for people who want to understand themselves more clearly and live with greater choice.</p></div>
+    <div><p class="eyebrow">Practical</p><p>Greater Manchester · Online and in person subject to confirmation.</p></div>
+    <div><p class="eyebrow">Important</p><p>{{ site.data.site-settings.crisis_notice }}</p></div>
   </div>
-
-  <div class="shell footer-bottom">
-    <p>© <span data-current-year>2026</span> {{ site.title }}.</p>
-    {% if site.demo %}<p>Demonstration content only.</p>{% endif %}
-  </div>
+  <div class="shell footer-bottom"><span>© {{ 'now' | date: '%Y' }} Alexander Watson</span><a href="{{ '/privacy/' | relative_url }}">Privacy</a></div>
 </footer>

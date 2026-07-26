@@ -1,17 +1,10 @@
 title: Alexander Watson Counselling
-short_title: Alexander Watson
-email: hello@alexanderwatsoncounselling.co.uk
-phone: "0161 000 0000"
-description: Calm, relational counselling for adults in Stockport and online.
-url: https://alexanderwatsoncounselling.co.uk
+description: Thoughtful, person-centred counselling in Greater Manchester and online.
+url: ""
 baseurl: ""
-location: Stockport, Greater Manchester
-form_endpoint: https://formspree.io/f/REPLACE_ME
-demo: true
-markdown: kramdown
 permalink: pretty
+markdown: kramdown
+plugins: []
 exclude:
   - README.md
-  - IMAGE_PROMPTS.md
-  - FULL_CODE.md
-  - michael-doe-premium-site.zip
+  - docs
