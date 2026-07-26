@@ -2,7 +2,7 @@
   const button = document.querySelector('[data-menu-toggle]');
   const navigation = document.querySelector('[data-site-navigation]');
   const label = document.querySelector('[data-menu-label]');
-  const desktopQuery = window.matchMedia('(min-width: 960px)');
+  const desktopQuery = window.matchMedia('(min-width: 1040px)');
 
   if (!button || !navigation) return;
 
@@ -18,28 +18,32 @@
   const menuIsOpen = () =>
     button.getAttribute('aria-expanded') === 'true';
 
-  const focusableItems = () => [
+  const getFocusableItems = () => [
     button,
     ...navigation.querySelectorAll(focusableSelector)
-  ].filter((element) => {
-    return (
-      !element.hasAttribute('disabled') &&
-      element.getAttribute('aria-hidden') !== 'true'
-    );
-  });
+  ].filter((element) => (
+    !element.hasAttribute('disabled') &&
+    element.getAttribute('aria-hidden') !== 'true'
+  ));
 
-  const closeMenu = ({ returnFocus = true } = {}) => {
-    document.body.classList.remove('nav-open');
+  const setButtonState = (open) => {
+    button.setAttribute('aria-expanded', String(open));
 
-    button.setAttribute('aria-expanded', 'false');
     button.setAttribute(
       'aria-label',
-      'Open primary navigation'
+      open
+        ? 'Close primary navigation'
+        : 'Open primary navigation'
     );
 
     if (label) {
-      label.textContent = 'Menu';
+      label.textContent = open ? 'Close' : 'Menu';
     }
+  };
+
+  const closeMenu = ({ returnFocus = true } = {}) => {
+    document.body.classList.remove('nav-open');
+    setButtonState(false);
 
     if (!desktopQuery.matches) {
       navigation.setAttribute('aria-hidden', 'true');
@@ -55,16 +59,7 @@
     if (desktopQuery.matches) return;
 
     document.body.classList.add('nav-open');
-
-    button.setAttribute('aria-expanded', 'true');
-    button.setAttribute(
-      'aria-label',
-      'Close primary navigation'
-    );
-
-    if (label) {
-      label.textContent = 'Close';
-    }
+    setButtonState(true);
 
     navigation.removeAttribute('aria-hidden');
     navigation.removeAttribute('inert');
@@ -75,33 +70,22 @@
   };
 
   const synchroniseLayout = () => {
+    document.body.classList.remove('nav-open');
+    setButtonState(false);
+
     if (desktopQuery.matches) {
-      document.body.classList.remove('nav-open');
-
-      button.setAttribute('aria-expanded', 'false');
-      button.setAttribute(
-        'aria-label',
-        'Open primary navigation'
-      );
-
-      if (label) {
-        label.textContent = 'Menu';
-      }
-
       navigation.removeAttribute('aria-hidden');
       navigation.removeAttribute('inert');
-    } else if (!menuIsOpen()) {
+    } else {
       navigation.setAttribute('aria-hidden', 'true');
       navigation.setAttribute('inert', '');
     }
   };
 
   button.addEventListener('click', () => {
-    if (menuIsOpen()) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    menuIsOpen()
+      ? closeMenu()
+      : openMenu();
   });
 
   navigation.addEventListener('click', (event) => {
@@ -114,7 +98,12 @@
   });
 
   document.addEventListener('keydown', (event) => {
-    if (!menuIsOpen() || desktopQuery.matches) return;
+    if (
+      !menuIsOpen() ||
+      desktopQuery.matches
+    ) {
+      return;
+    }
 
     if (event.key === 'Escape') {
       event.preventDefault();
@@ -124,7 +113,7 @@
 
     if (event.key !== 'Tab') return;
 
-    const items = focusableItems();
+    const items = getFocusableItems();
 
     if (!items.length) return;
 
@@ -146,10 +135,18 @@
     }
   });
 
-  desktopQuery.addEventListener(
-    'change',
-    synchroniseLayout
-  );
+  if (
+    typeof desktopQuery.addEventListener === 'function'
+  ) {
+    desktopQuery.addEventListener(
+      'change',
+      synchroniseLayout
+    );
+  } else {
+    desktopQuery.addListener(
+      synchroniseLayout
+    );
+  }
 
   synchroniseLayout();
 })();
