@@ -1,8 +1,20 @@
 <footer class="site-footer">
   <div class="shell footer-grid">
-    <div><p class="eyebrow">Alexander Watson Counselling</p><p>Thoughtful counselling for people who want to understand themselves more clearly and live with greater choice.</p></div>
-    <div><p class="eyebrow">Practical</p><p>Greater Manchester · Online and in person subject to confirmation.</p></div>
-    <div><p class="eyebrow">Important</p><p>{{ site.data.site-settings.crisis_notice }}</p></div>
+    <div>
+      <p class="eyebrow">Alexander Watson Counselling</p>
+      <p>Thoughtful counselling for people who want to understand themselves more clearly and live with greater choice.</p>
+    </div>
+    <div>
+      <p class="eyebrow">Practical</p>
+      <p>Greater Manchester<br>Online and in person, subject to confirmation.</p>
+    </div>
+    <div>
+      <p class="eyebrow">Important</p>
+      <p><a href="{{ '/privacy/' | relative_url }}">Privacy</a></p>
+    </div>
   </div>
-  <div class="shell footer-bottom"><span>© {{ 'now' | date: '%Y' }} Alexander Watson</span><a href="{{ '/privacy/' | relative_url }}">Privacy</a></div>
+  <div class="shell footer-bottom">
+    <span>&copy; {{ 'now' | date: '%Y' }} Alexander Watson</span>
+    <a href="{{ '/contact/' | relative_url }}">Begin a conversation</a>
+  </div>
 </footer>
