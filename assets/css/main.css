@@ -3,17 +3,24 @@
    ================================================================ */
 
 :root {
-  --bg: #f8f6f2;
-  --paper: #fffdf9;
-  --ink: #2f3333;
-  --muted: #59615f;
-  --muted-strong: #454d4b;
-  --sage: #748779;
-  --sage-deep: #526458;
-  --sage-soft: #e7ece5;
-  --sage-pale: #f0f3ef;
-  --stone: #efede7;
-  --line: #d8d4cc;
+  /* Locked five-colour brand palette */
+  --off-white: #F8F6F2;
+  --charcoal: #2F3333;
+  --sage: #7A8B7B;
+  --muted-grey: #6B6E6E;
+  --warm-stone: #D4D1CB;
+
+  /* Semantic colour roles */
+  --bg: var(--off-white);
+  --paper: var(--off-white);
+  --ink: var(--charcoal);
+  --muted: var(--muted-grey);
+  --muted-strong: var(--muted-grey);
+  --sage-deep: var(--sage);
+  --sage-soft: rgba(122, 139, 123, 0.14);
+  --sage-pale: rgba(122, 139, 123, 0.08);
+  --stone: var(--warm-stone);
+  --line: var(--warm-stone);
 
   --display: "Instrument Serif", Georgia, serif;
   --body: "Manrope", "Segoe UI", Arial, sans-serif;
@@ -86,12 +93,12 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(82, 100, 88, 0.48);
+  outline: 3px solid rgba(122, 139, 123, 0.48);
   outline-offset: 4px;
 }
 
 ::selection {
-  background: rgba(116, 135, 121, 0.26);
+  background: rgba(122, 139, 123, 0.26);
 }
 
 /* ================================================================
@@ -138,7 +145,7 @@ p:last-child {
 
 .eyebrow {
   margin: 0 0 1rem;
-  color: var(--sage-deep);
+  color: var(--muted-grey);
   font-size: 0.76rem;
   font-weight: 650;
   letter-spacing: 0.13em;
@@ -187,9 +194,10 @@ p:last-child {
 }
 
 .button-primary {
-  border-color: var(--sage-deep);
-  background: var(--sage-deep);
-  color: var(--paper);
+  border-color: var(--charcoal);
+  background: var(--charcoal);
+  color: var(--off-white);
+  box-shadow: 0 0 0 2px rgba(122, 139, 123, 0.20);
 }
 
 .button:hover,
@@ -229,8 +237,8 @@ p:last-child {
 .text-link:hover,
 .text-link:focus-visible {
   gap: 0.6rem;
-  border-color: var(--sage-deep);
-  color: var(--sage-deep);
+  border-color: var(--sage);
+  color: var(--charcoal);
 }
 
 .skip-link {
@@ -260,7 +268,7 @@ p:last-child {
   top: 0;
   z-index: 50;
   min-height: var(--header-height);
-  border-bottom: 1px solid rgba(216, 212, 204, 0.8);
+  border-bottom: 1px solid rgba(212, 209, 203, 0.8);
   background: rgba(248, 246, 242, 0.94);
   backdrop-filter: blur(14px);
 }
@@ -291,7 +299,7 @@ p:last-child {
 .brand small {
   display: block;
   margin-top: 0.25rem;
-  color: var(--sage-deep);
+  color: var(--muted-grey);
   font-size: 0.56rem;
   font-weight: 650;
   letter-spacing: 0.16em;
@@ -425,7 +433,7 @@ p:last-child {
 .hero-principle {
   max-width: 31ch;
   margin: 1.05rem 0 0;
-  color: var(--sage-deep);
+  color: var(--muted-grey);
   font-family: var(--display);
   font-size: clamp(1.62rem, 1.48rem + 0.45vw, 2.05rem);
   font-style: italic;
@@ -452,7 +460,7 @@ p:last-child {
   position: absolute;
   inset: 0;
   z-index: 1;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(248, 246, 242, 0.3);
   border-radius: inherit;
   content: "";
   pointer-events: none;
@@ -477,7 +485,7 @@ p:last-child {
   bottom: 0;
   left: calc(50% - 0.5px);
   width: 1px;
-  background: rgba(216, 212, 204, 0.45);
+  background: rgba(212, 209, 203, 0.45);
   content: "";
   pointer-events: none;
 }
@@ -519,7 +527,7 @@ p:last-child {
 .recognition-list {
   width: min(100%, 34rem);
   justify-self: end;
-  border-bottom: 1px solid rgba(82, 100, 88, 0.24);
+  border-bottom: 1px solid rgba(122, 139, 123, 0.24);
 }
 
 .recognition-list p {
@@ -527,7 +535,7 @@ p:last-child {
   max-width: 44ch;
   margin: 0;
   padding: 1.3rem 0 1.3rem 2rem;
-  border-top: 1px solid rgba(82, 100, 88, 0.24);
+  border-top: 1px solid rgba(122, 139, 123, 0.24);
   color: var(--muted-strong);
   font-size: 1.04rem;
   line-height: 1.62;
@@ -597,7 +605,7 @@ p:last-child {
 .approach-principles-list span,
 .journey-steps span,
 .support-grid span {
-  color: var(--sage-deep);
+  color: var(--muted-grey);
   font-size: 0.78rem;
   font-weight: 650;
   letter-spacing: 0.1em;
@@ -636,7 +644,7 @@ p:last-child {
   width: min(100%, 380px);
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-md);
-  background: #ded9cf;
+  background: var(--warm-stone);
 }
 
 .about-preview-media img {
@@ -689,8 +697,13 @@ p:last-child {
 }
 
 .quote-section .eyebrow {
-  margin-top: 0.6rem;
-  color: #d8e0d9;
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  background: var(--charcoal);
+  color: var(--off-white);
 }
 
 .quote-section blockquote {
@@ -888,7 +901,7 @@ p:last-child {
 }
 
 .approach-principles-list {
-  border-bottom: 1px solid rgba(82, 100, 88, 0.25);
+  border-bottom: 1px solid rgba(122, 139, 123, 0.25);
 }
 
 .approach-principles-list article {
@@ -896,7 +909,7 @@ p:last-child {
   grid-template-columns: 48px 1fr;
   gap: 1rem;
   padding-block: 1.5rem;
-  border-top: 1px solid rgba(82, 100, 88, 0.25);
+  border-top: 1px solid rgba(122, 139, 123, 0.25);
 }
 
 .approach-principles-list h3 {
@@ -997,7 +1010,12 @@ p:last-child {
 }
 
 .working-note .eyebrow {
-  color: #d8e0d9;
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  background: var(--charcoal);
+  color: var(--off-white);
 }
 
 .working-note blockquote {
@@ -1058,10 +1076,10 @@ p:last-child {
 .confirm-tag {
   display: inline-flex;
   padding: 0.25rem 0.6rem;
-  border: 1px solid rgba(82, 100, 88, 0.28);
+  border: 1px solid rgba(122, 139, 123, 0.28);
   border-radius: 999px;
   background: var(--sage-pale);
-  color: var(--sage-deep);
+  color: var(--charcoal);
   font-size: 0.82rem;
   font-weight: 650;
 }
@@ -1163,7 +1181,7 @@ p:last-child {
 .contact-form textarea:focus,
 .contact-form select:focus {
   border-color: var(--sage);
-  outline: 3px solid rgba(116, 135, 121, 0.28);
+  outline: 3px solid rgba(122, 139, 123, 0.28);
   outline-offset: 1px;
 }
 
@@ -1211,13 +1229,13 @@ p:last-child {
 
 .footer-grid p {
   max-width: 30rem;
-  color: #d9d8d3;
+  color: var(--warm-stone);
   font-size: 0.92rem;
   line-height: 1.7;
 }
 
 .footer-grid .eyebrow {
-  color: #b9c4bb;
+  color: var(--warm-stone);
 }
 
 .footer-grid a,
@@ -1231,7 +1249,7 @@ p:last-child {
   gap: 2rem;
   margin-top: 3rem;
   padding-top: 1.25rem;
-  border-top: 1px solid #555;
+  border-top: 1px solid var(--muted-grey);
   font-size: 0.86rem;
 }
 
@@ -1279,8 +1297,8 @@ p:last-child {
     justify-content: space-between;
     overflow-y: auto;
     padding: clamp(6.75rem, 16vh, 8.5rem) max(1.5rem, calc((100vw - 720px) / 2)) 2.5rem;
-    background: var(--sage-deep);
-    color: var(--paper);
+    background: var(--charcoal);
+    color: var(--off-white);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -1309,11 +1327,11 @@ p:last-child {
 
   .js .nav-list li {
     width: 100%;
-    border-top: 1px solid rgba(255, 253, 249, 0.22);
+    border-top: 1px solid rgba(248, 246, 242, 0.22);
   }
 
   .js .nav-list li:last-child {
-    border-bottom: 1px solid rgba(255, 253, 249, 0.22);
+    border-bottom: 1px solid rgba(248, 246, 242, 0.22);
   }
 
   .js .nav-list a {
@@ -1332,7 +1350,7 @@ p:last-child {
   }
 
   .js .nav-list a[aria-current="page"] {
-    color: #cfdbd1;
+    color: var(--warm-stone);
   }
 
   .js .nav-actions {
@@ -1344,19 +1362,22 @@ p:last-child {
   }
 
   .js .nav-cta {
-    border-color: var(--paper);
-    color: var(--paper);
+    border-color: var(--warm-stone);
+    background: var(--off-white);
+    color: var(--charcoal);
+    box-shadow: none;
   }
 
   .js .nav-cta:hover,
   .js .nav-cta:focus-visible {
-    background: var(--paper);
-    color: var(--sage-deep);
+    border-color: var(--sage);
+    background: var(--warm-stone);
+    color: var(--charcoal);
   }
 
   .js .nav-location {
     display: block;
-    color: #cfdbd1;
+    color: var(--warm-stone);
     font-size: 0.74rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1597,8 +1618,8 @@ p:last-child {
   }
 
   body {
-    background: #fff;
-    color: #000;
+    background: var(--off-white);
+    color: var(--charcoal);
     font-size: 12pt;
   }
 
@@ -1609,20 +1630,16 @@ p:last-child {
 /* ================================================================
    07. JULY 2026 REFINEMENT LAYER
    Reduces visual noise, separates the header and hero, strengthens
-   conversion actions, and adds more visual structure to key pages.
+   conversion actions, and locks every colour to the five-colour palette.
    ================================================================ */
 
 :root {
-  --header-bg: #fffdf9;
-  --hero-bg: #f1f2ed;
-  --accent: #8b604d;
-  --accent-deep: #704a3a;
-  --accent-soft: #f0e6e0;
+  --hero-bg: rgba(122, 139, 123, 0.10);
 }
 
 .site-header {
-  border-bottom-color: rgba(216, 212, 204, 0.95);
-  background: rgba(255, 253, 249, 0.96);
+  border-bottom-color: rgba(212, 209, 203, 0.95);
+  background: rgba(248, 246, 242, 0.96);
   box-shadow: 0 1px 0 rgba(47, 51, 51, 0.025);
 }
 
@@ -1636,43 +1653,37 @@ p:last-child {
   color: var(--ink);
 }
 
-.nav-cta {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--paper);
+.nav-cta,
+.button-primary,
+.button-accent {
+  border-color: var(--charcoal);
+  background: var(--charcoal);
+  color: var(--off-white);
+  box-shadow: 0 0 0 2px rgba(122, 139, 123, 0.20);
 }
 
 .nav-cta:hover,
-.nav-cta:focus-visible {
-  border-color: var(--accent-deep);
-  background: var(--accent-deep);
-  color: var(--paper);
-}
-
-.button-accent {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--paper);
-}
-
+.nav-cta:focus-visible,
+.button-primary:hover,
+.button-primary:focus-visible,
 .button-accent:hover,
 .button-accent:focus-visible {
-  border-color: var(--accent-deep);
-  background: var(--accent-deep);
-  color: var(--paper);
+  border-color: var(--sage);
+  background: var(--off-white);
+  color: var(--charcoal);
 }
 
 .button-secondary {
-  border-color: rgba(82, 100, 88, 0.62);
-  background: rgba(255, 253, 249, 0.54);
-  color: var(--sage-deep);
+  border-color: var(--sage);
+  background: var(--off-white);
+  color: var(--charcoal);
 }
 
 .button-secondary:hover,
 .button-secondary:focus-visible {
-  border-color: var(--sage-deep);
-  background: var(--sage-deep);
-  color: var(--paper);
+  border-color: var(--sage);
+  background: var(--warm-stone);
+  color: var(--charcoal);
 }
 
 .button-compact {
@@ -1702,7 +1713,7 @@ p:last-child {
 .hero-principle {
   max-width: 34ch;
   margin: 1.25rem 0 0;
-  color: var(--sage-deep);
+  color: var(--muted-grey);
   font-family: var(--body);
   font-size: 1rem;
   font-style: normal;
@@ -1717,7 +1728,7 @@ p:last-child {
 }
 
 .page-hero {
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0.68), rgba(248, 246, 242, 0));
+  background: linear-gradient(180deg, rgba(248, 246, 242, 0.68), rgba(248, 246, 242, 0));
 }
 
 .recognition-visual {
@@ -1747,14 +1758,14 @@ p:last-child {
 .recognition-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid rgba(82, 100, 88, 0.24);
-  border-bottom: 1px solid rgba(82, 100, 88, 0.24);
+  border-top: 1px solid rgba(122, 139, 123, 0.24);
+  border-bottom: 1px solid rgba(122, 139, 123, 0.24);
 }
 
 .recognition-cards article {
   min-height: 15rem;
   padding: 2rem clamp(1.5rem, 3vw, 2.4rem);
-  border-left: 1px solid rgba(82, 100, 88, 0.24);
+  border-left: 1px solid rgba(122, 139, 123, 0.24);
 }
 
 .recognition-cards article:first-child {
@@ -1768,7 +1779,7 @@ p:last-child {
   width: 2.5rem;
   height: 2.5rem;
   margin-bottom: 2.2rem;
-  border: 1px solid rgba(82, 100, 88, 0.56);
+  border: 1px solid rgba(122, 139, 123, 0.56);
   border-radius: 50%;
 }
 
@@ -1781,7 +1792,7 @@ p:last-child {
 
 .signal-mark::before {
   inset: 0.45rem;
-  border: 1px solid rgba(82, 100, 88, 0.4);
+  border: 1px solid rgba(122, 139, 123, 0.4);
 }
 
 .signal-mark::after {
@@ -1840,7 +1851,7 @@ p:last-child {
   border: 1px solid var(--sage);
   border-radius: 50%;
   background: var(--paper);
-  color: var(--sage-deep);
+  color: var(--muted-grey);
   font-size: 0.78rem;
   font-weight: 650;
   letter-spacing: 0.1em;
@@ -1970,7 +1981,7 @@ p:last-child {
 }
 
 .fees-hero-card strong {
-  color: var(--sage-deep);
+  color: var(--charcoal);
   font-size: 0.88rem;
   font-weight: 600;
 }
@@ -1994,7 +2005,7 @@ p:last-child {
 }
 
 .facts-featured div:nth-child(odd) {
-  background: rgba(240, 243, 239, 0.5);
+  background: rgba(122, 139, 123, 0.08);
 }
 
 .direct-contact {
@@ -2003,8 +2014,10 @@ p:last-child {
 }
 
 .direct-contact a {
-  color: var(--sage-deep);
+  color: var(--charcoal);
   font-weight: 600;
+  text-decoration-color: var(--sage);
+  text-decoration-thickness: 2px;
   text-underline-offset: 0.2em;
 }
 
@@ -2050,7 +2063,7 @@ p:last-child {
   align-items: center;
   justify-content: center;
   padding: 0.65rem 1rem;
-  border: 1px solid #b9c4bb;
+  border: 1px solid var(--warm-stone);
   border-radius: 999px;
   color: var(--paper);
   font-weight: 600;
@@ -2082,7 +2095,7 @@ p:last-child {
   .recognition-cards article:first-child {
     min-height: 0;
     padding: 1.75rem 0;
-    border-top: 1px solid rgba(82, 100, 88, 0.24);
+    border-top: 1px solid rgba(122, 139, 123, 0.24);
     border-left: 0;
   }
 
