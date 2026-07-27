@@ -1,8 +1,18 @@
-<section class="page-hero page-hero-simple">
-  <div class="shell">
-    <p class="eyebrow">Fees and practicalities</p>
-    <h1>Clear information, without hidden steps.</h1>
-    <p class="lede">The practical details should feel straightforward. The items below remain clearly marked until the final arrangements are confirmed.</p>
+<section class="page-hero page-hero-fees">
+  <div class="shell page-hero-grid">
+    <div>
+      <p class="eyebrow">Fees and practicalities</p>
+      <h1>Clear information, without hidden steps.</h1>
+      <p class="lede">The practical details should feel straightforward. Everything you need to decide will be visible before you book.</p>
+    </div>
+
+    <aside class="fees-hero-card" aria-label="Information confirmed before booking">
+      <p class="eyebrow">At a glance</p>
+      <div><span>Session length</span><strong>Clearly stated</strong></div>
+      <div><span>Fee</span><strong>Clearly stated</strong></div>
+      <div><span>Availability</span><strong>Clearly stated</strong></div>
+      <p class="fees-card-note">No hidden steps before an initial conversation.</p>
+    </aside>
   </div>
 </section>
 
@@ -11,36 +21,35 @@
     <div class="fees-intro">
       <p class="eyebrow">Sessions</p>
       <h2>What to expect before booking.</h2>
-      <p>Once the final fee, session length and availability are confirmed, this page should contain everything a prospective client needs to make an informed decision.</p>
+      <p>Once the final details are confirmed, this page should contain everything a prospective client needs to make an informed decision.</p>
     </div>
 
-<div>
-  <dl class="facts facts-featured">
     <div>
-      <dt>Session length</dt>
-      <dd><span class="confirm-tag">To confirm</span></dd>
-    </div>
-    <div>
-      <dt>Fee</dt>
-      <dd><span class="confirm-tag">To confirm</span></dd>
-    </div>
-    <div>
-      <dt>Format</dt>
-      <dd>Online and in person — exact arrangements to be confirmed</dd>
-    </div>
-    <div>
-      <dt>Availability</dt>
-      <dd><span class="confirm-tag">To confirm</span></dd>
-    </div>
-    <div>
-      <dt>Cancellation policy</dt>
-      <dd><span class="confirm-tag">To confirm</span></dd>
-    </div>
-  </dl>
+      <dl class="facts facts-featured">
+        <div>
+          <dt>Session length</dt>
+          <dd><span class="confirm-tag">To confirm</span></dd>
+        </div>
+        <div>
+          <dt>Fee</dt>
+          <dd><span class="confirm-tag">To confirm</span></dd>
+        </div>
+        <div>
+          <dt>Format</dt>
+          <dd>Online and in person — exact arrangements to be confirmed</dd>
+        </div>
+        <div>
+          <dt>Availability</dt>
+          <dd><span class="confirm-tag">To confirm</span></dd>
+        </div>
+        <div>
+          <dt>Cancellation policy</dt>
+          <dd><span class="confirm-tag">To confirm</span></dd>
+        </div>
+      </dl>
 
-  <p class="note">These details are intentionally visible for confirmation rather than being invented. Remove this note before launch.</p>
-</div>
-
+      <p class="note">These details remain visible for confirmation rather than being invented. Remove this note before launch.</p>
+    </div>
   </div>
 </section>
 

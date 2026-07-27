@@ -3,81 +3,89 @@
     <div class="hero-copy">
       <p class="eyebrow">Counselling in Greater Manchester and online</p>
       <h1 id="home-hero-title">A place to understand what is happening inside you.</h1>
-      <p class="hero-principle">Without being rushed or reduced to a label.</p>
-      <p class="lede">Thoughtful, person-centred counselling for adults who appear capable while feeling overwhelmed, disconnected or stuck underneath.</p>
+      <p class="hero-principle">Thoughtful, person-centred counselling.</p>
+      <p class="lede">For adults who appear capable on the outside while feeling overwhelmed, disconnected or stuck underneath.</p>
       <div class="actions">
-        <a class="button button-primary" href="{{ '/contact/' | relative_url }}">Begin a conversation</a>
-        <a class="text-link" href="{{ '/working-together/' | relative_url }}">How we might work together</a>
+        <a class="button button-accent" href="{{ '/contact/' | relative_url }}">Begin a conversation</a>
+        <a class="button button-secondary" href="{{ '/working-together/' | relative_url }}">How we might work together</a>
       </div>
     </div>
 
-<figure class="hero-media">
-  <img
-    src="{{ '/assets/images/home/home-hero-winding-path-landscape.webp' | relative_url }}"
-    width="1500"
-    height="1200"
-    alt="A quiet woodland path curving gently out of sight"
-    fetchpriority="high"
-    decoding="async">
-</figure>
-
+    <figure class="hero-media">
+      <img
+        src="{{ '/assets/images/home/home-hero-winding-path-landscape.webp' | relative_url }}"
+        width="1500"
+        height="1200"
+        alt="A quiet woodland path curving gently out of sight"
+        fetchpriority="high"
+        decoding="async">
+    </figure>
   </div>
 </section>
 
-<section class="intro-section" aria-labelledby="intro-title">
-  <div class="shell intro-grid">
-    <div>
-      <p class="eyebrow">A quieter kind of space</p>
-      <h2 id="intro-title">You do not need to arrive with a perfect explanation.</h2>
-    </div>
-    <p>We can begin with what you notice: tiredness, confusion, a repeated pattern, or the sense that something does not feel quite right.</p>
-  </div>
-</section>
-
-<section class="recognition" aria-labelledby="recognition-title">
-  <div class="shell recognition-grid">
-    <div class="section-heading">
-      <p class="eyebrow">You may recognise</p>
-      <h2 id="recognition-title">Life is functioning, but it does not feel fully yours.</h2>
+<section class="recognition recognition-visual" aria-labelledby="recognition-title">
+  <div class="shell">
+    <div class="recognition-introduction">
+      <div>
+        <p class="eyebrow">You may recognise</p>
+        <h2 id="recognition-title">Life is functioning, but it does not feel fully yours.</h2>
+      </div>
+      <p>You may understand a great deal about yourself and still feel caught inside the same patterns.</p>
     </div>
 
-<div class="recognition-list">
-  <p>Your mind rarely stops analysing.</p>
-  <p>You have become skilled at appearing fine while carrying a great deal internally.</p>
-  <p>You can explain the pattern, but still feel caught inside it.</p>
-</div>
-
+    <div class="recognition-cards" role="list">
+      <article role="listitem">
+        <span class="signal-mark" aria-hidden="true"></span>
+        <h3>Always analysing</h3>
+        <p>Your mind rarely becomes quiet enough for you to feel settled.</p>
+      </article>
+      <article role="listitem">
+        <span class="signal-mark" aria-hidden="true"></span>
+        <h3>Appearing fine</h3>
+        <p>You carry a great deal internally while looking capable from the outside.</p>
+      </article>
+      <article role="listitem">
+        <span class="signal-mark" aria-hidden="true"></span>
+        <h3>Knowing, but stuck</h3>
+        <p>You can explain the pattern without yet feeling free from it.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="process-section" aria-labelledby="process-title">
+<section class="process-section process-section-visual" aria-labelledby="process-title">
   <div class="shell">
     <div class="process-introduction">
       <div>
         <p class="eyebrow">A way through</p>
         <h2 id="process-title">Understanding creates more choice.</h2>
       </div>
-      <p>We make sense of what is happening, notice the adaptations that once protected you, and create more room to choose how you respond.</p>
+      <p>The work is not about producing a perfect explanation. It is about creating enough clarity to respond differently.</p>
     </div>
 
-<div class="process-grid-home">
-  <article>
-    <span>01</span>
-    <h3>Understand</h3>
-    <p>Make sense of experiences that have been difficult to name.</p>
-  </article>
-  <article>
-    <span>02</span>
-    <h3>Notice</h3>
-    <p>Recognise where you learned to adapt, perform or disconnect in order to cope.</p>
-  </article>
-  <article>
-    <span>03</span>
-    <h3>Choose</h3>
-    <p>Develop more freedom to respond rather than being directed by old patterns.</p>
-  </article>
-</div>
-
+    <div class="process-map" role="list" aria-label="A three-stage counselling process">
+      <article role="listitem">
+        <span class="process-node">01</span>
+        <div>
+          <h3>Understand</h3>
+          <p>Find accurate language for what has been difficult to name.</p>
+        </div>
+      </article>
+      <article role="listitem">
+        <span class="process-node">02</span>
+        <div>
+          <h3>Notice</h3>
+          <p>Recognise the adaptations and patterns shaping the present.</p>
+        </div>
+      </article>
+      <article role="listitem">
+        <span class="process-node">03</span>
+        <div>
+          <h3>Choose</h3>
+          <p>Create more room to respond rather than repeat automatically.</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -93,20 +101,20 @@
         decoding="async">
     </figure>
 
-<div class="about-preview-copy">
-  <p class="eyebrow">About Alexander</p>
-  <h2 id="about-preview-title">Counselling that is thoughtful, collaborative and human.</h2>
-  <p>My way of working is calm and considered. I listen closely, ask useful questions and help you see patterns that can be difficult to recognise from inside them.</p>
+    <div class="about-preview-copy">
+      <p class="eyebrow">About Alexander</p>
+      <h2 id="about-preview-title">Counselling that is thoughtful, collaborative and human.</h2>
+      <p>I listen closely, ask useful questions and help you recognise patterns that can be difficult to see from inside them.</p>
 
-  <ul class="trust-list" aria-label="What you can expect">
-    <li>Space to think without being rushed</li>
-    <li>Honest, considered reflection</li>
-    <li>A collaborative pace rather than instructions</li>
-  </ul>
+      <ul class="trust-list" aria-label="What you can expect">
+        <li>Space to think without being rushed</li>
+        <li>Honest, considered reflection</li>
+        <li>A collaborative pace rather than instructions</li>
+      </ul>
 
-  <a class="text-link" href="{{ '/about/' | relative_url }}">More about me and how I work</a>
-</div>
-</div>
+      <a class="button button-secondary button-compact" href="{{ '/about/' | relative_url }}">More about me and how I work</a>
+    </div>
+  </div>
 </section>
 
 <section class="quote-section" aria-label="Counselling philosophy">
