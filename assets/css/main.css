@@ -312,27 +312,19 @@ section,
 .brand {
   position: relative;
   z-index: 70;
+  display: inline-flex;
   flex: 0 0 auto;
+  align-items: center;
   line-height: 1;
   text-decoration: none;
 }
 
-.brand span {
+.brand-logo {
   display: block;
-  font-family: var(--display);
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-}
-
-.brand small {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--muted-grey);
-  font-size: 0.56rem;
-  font-weight: 650;
-  letter-spacing: 0.16em;
-  line-height: 1.2;
-  text-transform: uppercase;
+  width: clamp(11.5625rem, 18vw, 13.75rem);
+  max-width: 46vw;
+  height: auto;
+  transition: filter var(--transition-fast);
 }
 
 .site-nav {
@@ -1418,10 +1410,12 @@ section,
     text-transform: uppercase;
   }
 
-  .nav-open .brand,
-  .nav-open .menu-toggle,
-  .nav-open .brand small {
+  .nav-open .menu-toggle {
     color: var(--paper);
+  }
+
+  .nav-open .brand-logo {
+    filter: brightness(0) invert(1);
   }
 
   .nav-open .menu-icon span:nth-child(1) {
@@ -1588,8 +1582,9 @@ section,
     font-size: clamp(2.25rem, 10vw, 3rem);
   }
 
-  .brand span {
-    font-size: 1.14rem;
+  .brand-logo {
+    width: 10.625rem;
+    max-width: 56vw;
   }
 
   .menu-label {
