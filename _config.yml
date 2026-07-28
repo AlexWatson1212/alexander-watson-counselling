@@ -1,5 +1,5 @@
 title: Alexander Watson Counselling
-description: Thoughtful, person-centred counselling in Greater Manchester and online.
+description: Thoughtful, person-centred counselling for adults in Greater Manchester and online.
 url: https://alexanderwatsoncounselling.co.uk
 baseurl: ""
 lang: en-GB
@@ -7,6 +7,49 @@ timezone: Europe/London
 
 markdown: kramdown
 permalink: pretty
+
+# Contact
+# Add a public practice email before launch.
+email:
+# Add the endpoint only when a secure form provider has been selected and tested.
+contact_form_endpoint:
+# Example: "two working days"
+enquiry_response_time:
+# Example: "Monday to Friday, 9am to 5pm"
+contact_working_hours:
+
+# Practical details
+# Complete these before publicly listing private-practice availability.
+practice_location:
+session_length:
+session_fee:
+introductory_call:
+introductory_call_length:
+introductory_call_format:
+session_frequency:
+availability_summary:
+in_person_details:
+payment_summary:
+cancellation_summary:
+reduced_fee_summary:
+online_platform:
+waiting_list_summary:
+review_frequency:
+
+# Professional position
+training_course: Level 4 Diploma in Therapeutic Counselling
+training_provider: Stockport College
+expected_qualification_date: June 2027
+professional_membership:
+supervision_summary: Client work is discussed regularly with a qualified counselling supervisor.
+about_personal_note:
+
+# Website privacy
+analytics_enabled: false
+non_essential_cookies: false
+use_google_fonts: true
+hosting_provider:
+privacy_last_updated: 28 July 2026
 
 exclude:
   - README.md

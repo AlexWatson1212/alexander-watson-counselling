@@ -2,17 +2,43 @@
   <div class="shell footer-grid">
     <div>
       <p class="eyebrow">Alexander Watson Counselling</p>
-      <p>Thoughtful counselling for people who want to understand themselves more clearly and live with greater choice.</p>
+      <p>Person-centred counselling for adults in Greater Manchester and online.</p>
     </div>
 
     <div>
       <p class="eyebrow">Practical</p>
-      <p>Greater Manchester<br>Online and in person, subject to confirmation.</p>
+      <p>
+        {% if site.practice_location %}In person in {{ site.practice_location }}<br>{% else %}Greater Manchester<br>{% endif %}
+        Online across the UK
+        {% if site.session_fee or site.session_length %}
+        <br>
+        {% if site.session_fee %}{{ site.session_fee }}{% endif %}
+        {% if site.session_fee and site.session_length %} · {% endif %}
+        {% if site.session_length %}{{ site.session_length }} minutes{% endif %}
+        {% endif %}
+      </p>
+      {% if site.email %}
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {% endif %}
+    </div>
+
+    <div>
+      <p class="eyebrow">Professional</p>
+      <p>
+        Counsellor in training
+        {% if site.training_course %}<br>{{ site.training_course }}{% endif %}
+        {% if site.training_provider %}<br>{{ site.training_provider }}{% endif %}
+        {% if site.expected_qualification_date %}<br>Expected qualification: {{ site.expected_qualification_date }}{% endif %}
+      </p>
     </div>
 
     <div>
       <p class="eyebrow">Important</p>
-      <p><a href="{{ '/privacy/' | relative_url }}">Privacy</a></p>
+      <p>
+        <a href="{{ '/privacy/' | relative_url }}">Privacy</a><br>
+        <a href="{{ '/contact/#urgent-support' | relative_url }}">Urgent support</a><br>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      </p>
     </div>
   </div>
 

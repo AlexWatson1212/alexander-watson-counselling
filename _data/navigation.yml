@@ -2,11 +2,11 @@
   url: /
 - label: About
   url: /about/
-- label: Support
+- label: What I help with
   url: /support/
-- label: Approach
-  url: /approach/
-- label: Working together
+- label: How I work
   url: /working-together/
 - label: Fees
   url: /fees/
+- label: Contact
+  url: /contact/

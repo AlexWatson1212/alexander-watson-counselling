@@ -2232,4 +2232,226 @@ section,
   .contact-form {
     padding: 1rem;
   }
-} 
+}
+
+/* ================================================================
+   08. CONTENT AND PRIVACY INTEGRATION
+   Supports the July 2026 copy revision, consolidated navigation,
+   FAQ, legal content and privacy-first contact flow.
+   ================================================================ */
+
+.section-link {
+  margin: 2rem 0 0;
+}
+
+.section-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid rgba(47, 51, 51, 0.38);
+  font-size: 0.96rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.section-link a::after {
+  color: var(--sage-deep);
+  content: "↗";
+  font-size: 0.9em;
+}
+
+.section-link a:hover,
+.section-link a:focus-visible {
+  border-color: var(--sage);
+}
+
+.hero-practical-list {
+  max-width: 34rem;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.hero-practical-list li {
+  padding-block: 0.72rem;
+  font-size: 0.92rem;
+}
+
+.support-band-heading > p:last-child {
+  grid-column: 2;
+  max-width: 52ch;
+  margin: 0;
+  color: var(--muted-strong);
+  line-height: 1.7;
+}
+
+.approach-principles-list article {
+  grid-template-columns: 1fr;
+}
+
+.faq-list {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item {
+  border-top: 1px solid var(--line);
+}
+
+.faq-item summary {
+  position: relative;
+  padding: 1.35rem 3rem 1.35rem 0;
+  font-family: var(--display);
+  font-size: clamp(1.55rem, 1.45rem + 0.35vw, 1.9rem);
+  line-height: 1.15;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  color: var(--sage-deep);
+  content: "+";
+  font-family: var(--body);
+  font-size: 1.35rem;
+  font-weight: 500;
+  transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item > div {
+  padding: 0 2rem 1.4rem 0;
+}
+
+.contact-form-fallback {
+  color: var(--muted-strong);
+}
+
+.contact-form-fallback a {
+  font-weight: 650;
+  text-underline-offset: 0.2em;
+}
+
+.form-consent a {
+  text-underline-offset: 0.2em;
+}
+
+.emergency-note h2 {
+  max-width: 13ch;
+  color: var(--ink);
+}
+
+.emergency-note ul {
+  margin: 1rem 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.emergency-note li + li {
+  margin-top: 0.55rem;
+}
+
+.legal-page {
+  padding-top: var(--space-md);
+}
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 0.68fr);
+  align-items: start;
+  gap: clamp(3rem, 8vw, 7rem);
+}
+
+.legal-contents {
+  position: sticky;
+  top: calc(var(--header-height) + 1.5rem);
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.legal-contents .eyebrow {
+  padding-top: 1rem;
+}
+
+.legal-contents a {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.legal-contents a:hover,
+.legal-contents a:focus-visible {
+  color: var(--ink);
+}
+
+.legal-content {
+  max-width: 72ch;
+}
+
+.legal-content > section {
+  padding-bottom: var(--space-md);
+  scroll-margin-top: calc(var(--header-height) + 2rem);
+}
+
+.legal-content > section + section {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--line);
+}
+
+.legal-content h2 {
+  max-width: 16ch;
+  margin-bottom: 1.35rem;
+}
+
+.legal-content h3 {
+  margin: 2rem 0 0.85rem;
+  font-family: var(--body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.footer-grid {
+  grid-template-columns: 1.25fr 0.8fr 0.95fr 0.65fr;
+}
+
+@media (max-width: 900px) {
+  .support-band-heading > p:last-child {
+    grid-column: auto;
+  }
+
+  .legal-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .legal-contents {
+    position: static;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-item summary {
+    padding-right: 2.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,13 +1,32 @@
 <section class="hero" aria-labelledby="home-hero-title">
   <div class="shell hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">Counselling in Greater Manchester and online</p>
-      <h1 id="home-hero-title">A place to understand what is happening inside you.</h1>
-      <p class="hero-principle">Thoughtful, person-centred counselling.</p>
-      <p class="lede">For adults who appear capable on the outside while feeling overwhelmed, disconnected or stuck underneath.</p>
+      <p class="eyebrow">Greater Manchester · Online</p>
+      <h1 id="home-hero-title">Counselling in Greater Manchester and online.</h1>
+      <p class="hero-principle">A place to understand what is happening inside you.</p>
+      <p class="lede">Thoughtful, person-centred counselling for adults who look capable from the outside and feel overwhelmed, disconnected or stuck underneath.</p>
+
+      {% if site.practice_location or site.session_fee or site.session_length or site.availability_summary %}
+      <ul class="trust-list hero-practical-list" aria-label="Counselling practical details">
+        {% if site.practice_location %}
+        <li>In person in {{ site.practice_location }}</li>
+        {% endif %}
+        {% if site.session_fee and site.session_length %}
+        <li>{{ site.session_fee }} per {{ site.session_length }}-minute session</li>
+        {% elsif site.session_fee %}
+        <li>{{ site.session_fee }} per session</li>
+        {% elsif site.session_length %}
+        <li>{{ site.session_length }}-minute sessions</li>
+        {% endif %}
+        {% if site.availability_summary %}
+        <li>{{ site.availability_summary }}</li>
+        {% endif %}
+      </ul>
+      {% endif %}
+
       <div class="actions">
         <a class="button button-accent" href="{{ '/contact/' | relative_url }}">Begin a conversation</a>
-        <a class="button button-secondary" href="{{ '/working-together/' | relative_url }}">How we might work together</a>
+        <a class="button button-secondary" href="{{ '/working-together/' | relative_url }}">How I work</a>
       </div>
     </div>
 
@@ -42,7 +61,7 @@
       <article role="listitem">
         <span class="signal-mark" aria-hidden="true"></span>
         <h3>Appearing fine</h3>
-        <p>You carry a great deal internally while looking capable from the outside.</p>
+        <p>Colleagues, friends and family see someone coping. They do not see what it costs.</p>
       </article>
       <article role="listitem">
         <span class="signal-mark" aria-hidden="true"></span>
@@ -50,6 +69,10 @@
         <p>You can explain the pattern without yet feeling free from it.</p>
       </article>
     </div>
+
+    <p class="section-link">
+      <a href="{{ '/support/' | relative_url }}">More of what people bring</a>
+    </p>
   </div>
 </section>
 
@@ -103,8 +126,8 @@
 
     <div class="about-preview-copy">
       <p class="eyebrow">About Alexander</p>
-      <h2 id="about-preview-title">Counselling that is thoughtful, collaborative and human.</h2>
-      <p>I listen closely, ask useful questions and help you recognise patterns that can be difficult to see from inside them.</p>
+      <h2 id="about-preview-title">I listen closely, and I say what I notice.</h2>
+      <p>I am a counsellor in training, working with adults in Greater Manchester and online. I ask useful questions and help you recognise patterns that can be difficult to see from inside them.</p>
 
       <ul class="trust-list" aria-label="What you can expect">
         <li>Space to think without being rushed</li>
@@ -124,15 +147,68 @@
   </div>
 </section>
 
+{% if site.session_fee or site.session_length or site.introductory_call or site.practice_location or site.availability_summary %}
+<section class="section section-border-top" aria-labelledby="home-practical-title">
+  <div class="shell split split-wide">
+    <div>
+      <p class="eyebrow">Practical details</p>
+      <h2 id="home-practical-title">At a glance.</h2>
+    </div>
+
+    <div>
+      <dl class="facts facts-featured">
+        {% if site.session_length %}
+        <div>
+          <dt>Sessions</dt>
+          <dd>{{ site.session_length }} minutes{% if site.session_frequency %}, {{ site.session_frequency }}{% endif %}</dd>
+        </div>
+        {% endif %}
+        {% if site.session_fee %}
+        <div>
+          <dt>Fee</dt>
+          <dd>{{ site.session_fee }} per session</dd>
+        </div>
+        {% endif %}
+        {% if site.introductory_call %}
+        <div>
+          <dt>Introductory call</dt>
+          <dd>{{ site.introductory_call }}</dd>
+        </div>
+        {% endif %}
+        {% if site.practice_location %}
+        <div>
+          <dt>Where</dt>
+          <dd>Online and in person in {{ site.practice_location }}</dd>
+        </div>
+        {% endif %}
+        {% if site.availability_summary %}
+        <div>
+          <dt>Availability</dt>
+          <dd>{{ site.availability_summary }}</dd>
+        </div>
+        {% endif %}
+      </dl>
+
+      <p class="section-link">
+        <a href="{{ '/fees/' | relative_url }}">Full fees and practical details</a>
+      </p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="cta-section" aria-labelledby="cta-title">
   <div class="shell cta-grid">
     <div>
       <p class="eyebrow">Next step</p>
-      <h2 id="cta-title">We can begin with a simple conversation.</h2>
+      <h2 id="cta-title">We can begin with a conversation.</h2>
     </div>
     <div class="cta-copy">
-      <p>Tell me a little about what has brought you here and ask what you need to know before deciding whether counselling feels right.</p>
-      <a class="button button-primary" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+      <p>A short, no-obligation introductory conversation gives you space to say a little about what brings you here and ask whatever you need to know.</p>
+      {% if site.enquiry_response_time %}
+      <p>I reply to enquiries within {{ site.enquiry_response_time }}.</p>
+      {% endif %}
+      <a class="button button-primary" href="{{ '/contact/' | relative_url }}">Begin a conversation</a>
     </div>
   </div>
 </section>
