@@ -321,8 +321,8 @@ section,
 
 .brand-logo {
   display: block;
-  width: clamp(11.5625rem, 18vw, 13.75rem);
-  max-width: 46vw;
+  width: clamp(9.375rem, 13vw, 11.125rem);
+  max-width: 42vw;
   height: auto;
   transition: filter var(--transition-fast);
 }
@@ -1583,8 +1583,8 @@ section,
   }
 
   .brand-logo {
-    width: 10.625rem;
-    max-width: 56vw;
+    width: 9.0625rem;
+    max-width: 52vw;
   }
 
   .menu-label {
@@ -2448,5 +2448,31 @@ section,
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================================
+   09. FINAL BRAND AND HOMEPAGE BALANCE
+   Keeps the primary mark understated and places the woodland image
+   before the homepage copy on larger screens. Mobile remains text-first.
+   ================================================================ */
+
+@media (min-width: 901px) {
+  .hero-grid {
+    grid-template-columns:
+      minmax(400px, 1.04fr)
+      minmax(0, 0.96fr);
+  }
+
+  .hero-media {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  .hero-copy {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
   }
 }
