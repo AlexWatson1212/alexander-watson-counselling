@@ -3,42 +3,57 @@
    ================================================================ */
 
 :root {
-  /* Locked five-colour brand palette */
-  --off-white: #F8F6F2;
-  --charcoal: #2F3333;
-  --sage: #7A8B7B;
-  --muted-grey: #6B6E6E;
-  --warm-stone: #D4D1CB;
+  /* Approved Alexander Watson colour system */
+  --deep-forest: #283A38;
+  --sage: #798371;
+  --warm-white: #F7F4EF;
+  --soft-stone: #D7DDD8;
+  --white: #FFFFFF;
+  --cream: #FAF8F6;
+  --brand-charcoal: #5F6A68;
+  --logo-ink: #1A2119;
 
-  /* Semantic colour roles */
-  --bg: var(--off-white);
-  --paper: var(--off-white);
-  --ink: var(--charcoal);
-  --muted: var(--muted-grey);
-  --muted-strong: var(--muted-grey);
+  /* Compatibility aliases retained for existing templates */
+  --off-white: var(--warm-white);
+  --charcoal: var(--deep-forest);
+  --muted-grey: var(--brand-charcoal);
+  --warm-stone: var(--soft-stone);
+
+  /* Semantic roles */
+  --bg: var(--warm-white);
+  --paper: var(--white);
+  --ink: var(--logo-ink);
+  --muted: var(--brand-charcoal);
+  --muted-strong: var(--brand-charcoal);
   --sage-deep: var(--sage);
-  --sage-soft: rgba(122, 139, 123, 0.14);
-  --sage-pale: rgba(122, 139, 123, 0.08);
-  --stone: var(--warm-stone);
-  --line: var(--warm-stone);
+  --sage-soft: rgba(121, 131, 113, 0.14);
+  --sage-pale: rgba(121, 131, 113, 0.08);
+  --stone: var(--soft-stone);
+  --line: var(--soft-stone);
+  --hero-bg: var(--warm-white);
 
+  /* Approved serif / sans-serif relationship */
   --display: "Instrument Serif", Georgia, serif;
-  --body: "Manrope", "Segoe UI", Arial, sans-serif;
+  --body: "Aileron", "Helvetica Neue", Arial, sans-serif;
 
-  --shell: min(1140px, calc(100% - 48px));
-  --reading: 64ch;
-  --header-height: 76px;
+  /* 1200px content width; 120px desktop margins */
+  --shell: min(1200px, calc(100% - 240px));
+  --reading: 680px;
+  --header-height: 64px;
 
-  --space-2xl: clamp(6rem, 9vw, 9rem);
-  --space-xl: clamp(5rem, 8vw, 8rem);
-  --space-lg: clamp(4rem, 6vw, 6rem);
-  --space-md: clamp(2.75rem, 4vw, 4rem);
-  --space-sm: clamp(1.5rem, 2vw, 2rem);
+  /* 8px spacing system */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 96px;
+  --space-2xl: 120px;
 
-  --radius-sm: 0.65rem;
-  --radius-md: 1.15rem;
+  /* 4px containers; structural elements remain square */
+  --radius-sm: 4px;
+  --radius-md: 4px;
 
-  --transition-fast: 180ms ease;
+  --transition-fast: 160ms ease;
   --transition-nav: 240ms ease;
 }
 
@@ -66,8 +81,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--body);
-  font-size: clamp(1.03rem, 1rem + 0.08vw, 1.09rem);
-  line-height: 1.68;
+  font-size: 1rem;
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -109,12 +124,12 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(122, 139, 123, 0.48);
+  outline: 3px solid rgba(121, 131, 113, 0.48);
   outline-offset: 4px;
 }
 
 ::selection {
-  background: rgba(122, 139, 123, 0.26);
+  background: rgba(121, 131, 113, 0.26);
 }
 
 /* ================================================================
@@ -128,22 +143,24 @@ blockquote {
   margin: 0;
   font-family: var(--display);
   font-weight: 400;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   line-height: 1;
   text-wrap: balance;
 }
 
 h1 {
-  font-size: clamp(3rem, 2.72rem + 1.45vw, 4.65rem);
+  font-size: clamp(3.5rem, 5.25vw, 4.6667rem);
+  line-height: 1.15;
 }
 
 h2 {
-  font-size: clamp(2.35rem, 2.12rem + 1.04vw, 3.45rem);
+  font-size: clamp(2.5rem, 3.6vw, 3rem);
+  line-height: 1.2;
 }
 
 h3 {
-  font-size: clamp(1.82rem, 1.72rem + 0.42vw, 2.18rem);
-  line-height: 1.06;
+  font-size: clamp(1.75rem, 2.4vw, 2rem);
+  line-height: 1.3;
 }
 
 p {
@@ -202,7 +219,7 @@ section,
   align-items: center;
   justify-content: center;
   border: 1px solid var(--ink);
-  border-radius: 999px;
+  border-radius: 4px;
   background: transparent;
   color: var(--ink);
   font-size: 0.94rem;
@@ -225,7 +242,7 @@ section,
   border-color: var(--charcoal);
   background: var(--charcoal);
   color: var(--off-white);
-  box-shadow: 0 0 0 2px rgba(122, 139, 123, 0.20);
+  box-shadow: none;
 }
 
 .button:hover,
@@ -235,7 +252,7 @@ section,
   border-color: var(--ink);
   background: var(--ink);
   color: var(--paper);
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .text-link {
@@ -244,7 +261,7 @@ section,
   gap: 0.45rem;
   width: fit-content;
   padding-bottom: 0.14rem;
-  border-bottom: 1px solid rgba(47, 51, 51, 0.38);
+  border-bottom: 1px solid rgba(40, 58, 56, 0.38);
   font-size: 0.96rem;
   font-weight: 650;
   line-height: 1.35;
@@ -275,7 +292,7 @@ section,
   left: 0.75rem;
   z-index: 200;
   padding: 0.7rem 0.9rem;
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--ink);
   color: var(--paper);
   text-decoration: none;
@@ -296,8 +313,8 @@ section,
   top: 0;
   z-index: 50;
   min-height: var(--header-height);
-  border-bottom: 1px solid rgba(212, 209, 203, 0.8);
-  background: rgba(248, 246, 242, 0.94);
+  border-bottom: 1px solid rgba(215, 221, 216, 0.8);
+  background: rgba(247, 244, 239, 0.94);
   backdrop-filter: blur(14px);
 }
 
@@ -473,14 +490,14 @@ section,
   aspect-ratio: 5 / 4;
   border-radius: var(--radius-md);
   background: var(--stone);
-  box-shadow: 0 24px 60px rgba(47, 51, 51, 0.09);
+  box-shadow: none;
 }
 
 .hero-media::before {
   position: absolute;
   inset: 0;
   z-index: 1;
-  border: 1px solid rgba(248, 246, 242, 0.3);
+  border: 1px solid rgba(247, 244, 239, 0.3);
   border-radius: inherit;
   content: "";
   pointer-events: none;
@@ -505,7 +522,7 @@ section,
   bottom: 0;
   left: calc(50% - 0.5px);
   width: 1px;
-  background: rgba(212, 209, 203, 0.45);
+  background: rgba(215, 221, 216, 0.45);
   content: "";
   pointer-events: none;
 }
@@ -547,7 +564,7 @@ section,
 .recognition-list {
   width: min(100%, 34rem);
   justify-self: end;
-  border-bottom: 1px solid rgba(122, 139, 123, 0.24);
+  border-bottom: 1px solid rgba(121, 131, 113, 0.24);
 }
 
 .recognition-list p {
@@ -555,7 +572,7 @@ section,
   max-width: 44ch;
   margin: 0;
   padding: 1.3rem 0 1.3rem 2rem;
-  border-top: 1px solid rgba(122, 139, 123, 0.24);
+  border-top: 1px solid rgba(121, 131, 113, 0.24);
   color: var(--muted-strong);
   font-size: 1.04rem;
   line-height: 1.62;
@@ -721,7 +738,7 @@ section,
   width: fit-content;
   margin-top: 0.35rem;
   padding: 0.35rem 0.55rem;
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--charcoal);
   color: var(--off-white);
 }
@@ -921,7 +938,7 @@ section,
 }
 
 .approach-principles-list {
-  border-bottom: 1px solid rgba(122, 139, 123, 0.25);
+  border-bottom: 1px solid rgba(121, 131, 113, 0.25);
 }
 
 .approach-principles-list article {
@@ -929,7 +946,7 @@ section,
   grid-template-columns: 48px 1fr;
   gap: 1rem;
   padding-block: 1.5rem;
-  border-top: 1px solid rgba(122, 139, 123, 0.25);
+  border-top: 1px solid rgba(121, 131, 113, 0.25);
 }
 
 .approach-principles-list h3 {
@@ -1033,7 +1050,7 @@ section,
   display: inline-flex;
   width: fit-content;
   padding: 0.35rem 0.55rem;
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--charcoal);
   color: var(--off-white);
 }
@@ -1096,8 +1113,8 @@ section,
 .confirm-tag {
   display: inline-flex;
   padding: 0.25rem 0.6rem;
-  border: 1px solid rgba(122, 139, 123, 0.28);
-  border-radius: 999px;
+  border: 1px solid rgba(121, 131, 113, 0.28);
+  border-radius: 4px;
   background: var(--sage-pale);
   color: var(--charcoal);
   font-size: 0.82rem;
@@ -1201,7 +1218,7 @@ section,
 .contact-form textarea:focus,
 .contact-form select:focus {
   border-color: var(--sage);
-  outline: 3px solid rgba(122, 139, 123, 0.28);
+  outline: 3px solid rgba(121, 131, 113, 0.28);
   outline-offset: 1px;
 }
 
@@ -1354,11 +1371,11 @@ section,
 
   .js .nav-list li {
     width: 100%;
-    border-top: 1px solid rgba(248, 246, 242, 0.22);
+    border-top: 1px solid rgba(247, 244, 239, 0.22);
   }
 
   .js .nav-list li:last-child {
-    border-bottom: 1px solid rgba(248, 246, 242, 0.22);
+    border-bottom: 1px solid rgba(247, 244, 239, 0.22);
   }
 
   .js .nav-list a {
@@ -1683,13 +1700,13 @@ section,
    ================================================================ */
 
 :root {
-  --hero-bg: rgba(122, 139, 123, 0.10);
+  --hero-bg: rgba(121, 131, 113, 0.10);
 }
 
 .site-header {
-  border-bottom-color: rgba(212, 209, 203, 0.95);
-  background: rgba(248, 246, 242, 0.96);
-  box-shadow: 0 1px 0 rgba(47, 51, 51, 0.025);
+  border-bottom-color: rgba(215, 221, 216, 0.95);
+  background: rgba(247, 244, 239, 0.96);
+  box-shadow: none;
 }
 
 .nav-list a {
@@ -1708,7 +1725,7 @@ section,
   border-color: var(--charcoal);
   background: var(--charcoal);
   color: var(--off-white);
-  box-shadow: 0 0 0 2px rgba(122, 139, 123, 0.20);
+  box-shadow: none;
 }
 
 .nav-cta:hover,
@@ -1777,7 +1794,7 @@ section,
 }
 
 .page-hero {
-  background: linear-gradient(180deg, rgba(248, 246, 242, 0.68), rgba(248, 246, 242, 0));
+  background: var(--warm-white);
 }
 
 .recognition-visual {
@@ -1807,14 +1824,14 @@ section,
 .recognition-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid rgba(122, 139, 123, 0.24);
-  border-bottom: 1px solid rgba(122, 139, 123, 0.24);
+  border-top: 1px solid rgba(121, 131, 113, 0.24);
+  border-bottom: 1px solid rgba(121, 131, 113, 0.24);
 }
 
 .recognition-cards article {
   min-height: 15rem;
   padding: 2rem clamp(1.5rem, 3vw, 2.4rem);
-  border-left: 1px solid rgba(122, 139, 123, 0.24);
+  border-left: 1px solid rgba(121, 131, 113, 0.24);
 }
 
 .recognition-cards article:first-child {
@@ -1828,7 +1845,7 @@ section,
   width: 2.5rem;
   height: 2.5rem;
   margin-bottom: 2.2rem;
-  border: 1px solid rgba(122, 139, 123, 0.56);
+  border: 1px solid rgba(121, 131, 113, 0.56);
   border-radius: 50%;
 }
 
@@ -1841,7 +1858,7 @@ section,
 
 .signal-mark::before {
   inset: 0.45rem;
-  border: 1px solid rgba(122, 139, 123, 0.4);
+  border: 1px solid rgba(121, 131, 113, 0.4);
 }
 
 .signal-mark::after {
@@ -1961,7 +1978,7 @@ section,
 }
 
 .page-hero-working .image-frame {
-  box-shadow: 0 24px 60px rgba(47, 51, 51, 0.08);
+  box-shadow: none;
 }
 
 .journey-steps-visual {
@@ -2014,7 +2031,7 @@ section,
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--paper);
-  box-shadow: 0 20px 50px rgba(47, 51, 51, 0.06);
+  box-shadow: none;
 }
 
 .fees-hero-card > div {
@@ -2054,7 +2071,7 @@ section,
 }
 
 .facts-featured div:nth-child(odd) {
-  background: rgba(122, 139, 123, 0.08);
+  background: rgba(121, 131, 113, 0.08);
 }
 
 .direct-contact {
@@ -2075,7 +2092,7 @@ section,
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--paper);
-  box-shadow: 0 20px 50px rgba(47, 51, 51, 0.045);
+  box-shadow: none;
 }
 
 .field-guidance {
@@ -2113,7 +2130,7 @@ section,
   justify-content: center;
   padding: 0.65rem 1rem;
   border: 1px solid var(--warm-stone);
-  border-radius: 999px;
+  border-radius: 4px;
   color: var(--paper);
   font-weight: 600;
   line-height: 1.2;
@@ -2144,7 +2161,7 @@ section,
   .recognition-cards article:first-child {
     min-height: 0;
     padding: 1.75rem 0;
-    border-top: 1px solid rgba(122, 139, 123, 0.24);
+    border-top: 1px solid rgba(121, 131, 113, 0.24);
     border-left: 0;
   }
 
@@ -2244,7 +2261,7 @@ section,
   align-items: center;
   gap: 0.45rem;
   padding-bottom: 0.15rem;
-  border-bottom: 1px solid rgba(47, 51, 51, 0.38);
+  border-bottom: 1px solid rgba(40, 58, 56, 0.38);
   font-size: 0.96rem;
   font-weight: 650;
   line-height: 1.35;
@@ -2474,5 +2491,558 @@ section,
     grid-column: 2;
     grid-row: 1;
     justify-self: start;
+  }
+}
+
+/* ================================================================
+   10. ALEXANDER WATSON BRAND SYSTEM — AUTHORITATIVE LAYER
+   Approved July 2026. This layer supersedes earlier exploratory rules.
+   ================================================================ */
+
+/* Typography and rhythm */
+body {
+  background: var(--warm-white);
+  color: var(--logo-ink);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+blockquote {
+  color: inherit;
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+h1 { line-height: 1.15; }
+h2 { line-height: 1.2; }
+h3 { line-height: 1.3; }
+
+p {
+  margin: 0 0 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lede,
+.prose p,
+.prose-large p,
+.prose-section p,
+.intro-grid > p,
+.process-introduction > p,
+.about-preview-copy > p,
+.cta-copy p,
+.recognition-introduction > p {
+  line-height: 1.6;
+}
+
+.prose,
+.prose-section,
+.legal-content {
+  max-width: var(--reading);
+}
+
+.eyebrow,
+.process-grid-home span,
+.process-grid span,
+.principles-grid span,
+.approach-principles-list span,
+.journey-steps span,
+.support-grid span,
+.process-node,
+.nav-location {
+  color: var(--sage);
+  letter-spacing: 0;
+}
+
+/* Grid, margins and section spacing */
+.shell {
+  width: var(--shell);
+  max-width: 1200px;
+}
+
+.hero-grid,
+.intro-grid,
+.recognition-grid,
+.recognition-introduction,
+.process-introduction,
+.about-preview-grid,
+.quote-inner,
+.cta-grid,
+.page-hero-grid,
+.split,
+.split-wide,
+.principles-heading,
+.approach-principles-grid,
+.journey-grid,
+.working-note-grid,
+.fees-grid,
+.fees-reassurance-grid,
+.contact-grid,
+.emergency-note-grid,
+.support-band-heading,
+.legal-layout {
+  column-gap: 48px;
+}
+
+.intro-section,
+.recognition,
+.recognition-visual,
+.process-section,
+.about-preview,
+.principles-band,
+.approach-principles,
+.support-band,
+.journey-section,
+.fees-section,
+.fees-reassurance,
+.contact-section,
+.section {
+  padding-block: 96px;
+}
+
+/* Header and navigation */
+.site-header {
+  min-height: 64px;
+  border-bottom: 1px solid var(--soft-stone);
+  background: rgba(247, 244, 239, 0.96);
+  box-shadow: none;
+}
+
+.header-inner {
+  min-height: 64px;
+}
+
+.brand-logo {
+  min-width: 120px;
+  filter: none;
+}
+
+.nav-list {
+  gap: 24px;
+}
+
+.nav-list a {
+  color: var(--logo-ink);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-list a::after {
+  height: 1px;
+  background: var(--sage);
+}
+
+/* Optional transparent home-state. Add .home to body and .is-scrolled via JS. */
+body.home .site-header:not(.is-scrolled) {
+  border-bottom-color: transparent;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+/* Buttons and calls to action */
+.button,
+.nav-cta,
+.footer-bottom a:last-child {
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid var(--deep-forest);
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transform: none;
+}
+
+.button-primary,
+.button-accent,
+.nav-cta {
+  border-color: var(--deep-forest);
+  background: var(--deep-forest);
+  color: var(--warm-white);
+}
+
+.button-secondary {
+  border-color: var(--deep-forest);
+  background: transparent;
+  color: var(--deep-forest);
+}
+
+.button:hover,
+.button:focus-visible,
+.button-primary:hover,
+.button-primary:focus-visible,
+.button-accent:hover,
+.button-accent:focus-visible,
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  border-color: var(--logo-ink);
+  background: var(--logo-ink);
+  color: var(--warm-white);
+  transform: none;
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  border-color: var(--deep-forest);
+  background: var(--deep-forest);
+  color: var(--warm-white);
+}
+
+.button-compact {
+  min-height: 48px;
+  padding-inline: 24px;
+}
+
+/* Links */
+.text-link,
+.section-link a {
+  border-bottom-color: var(--soft-stone);
+  font-weight: 600;
+}
+
+.text-link::after,
+.section-link a::after {
+  color: var(--sage);
+}
+
+/* Hero sections */
+.hero,
+.page-hero {
+  background: var(--warm-white);
+}
+
+.hero-grid {
+  min-height: calc(100svh - 64px);
+  padding-block: 160px;
+}
+
+.page-hero {
+  padding-block: 160px;
+}
+
+.hero-copy h1,
+.page-hero h1 {
+  max-width: 12ch;
+}
+
+.hero-principle {
+  color: var(--sage);
+  font-family: var(--body);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.hero-media,
+.about-preview-media,
+.image-frame,
+.page-hero-grid .image-frame,
+.page-hero-grid figure {
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.hero-media::before {
+  border-color: rgba(247, 244, 239, 0.28);
+}
+
+/* Surface hierarchy */
+.intro-section,
+.process-section,
+.process-section-visual,
+.cta-section,
+.contact-section,
+.fees-section,
+.journey-section {
+  background: var(--warm-white);
+}
+
+.recognition,
+.recognition-visual,
+.approach-principles,
+.fees-reassurance {
+  background: var(--cream);
+}
+
+.about-preview,
+.principles-band,
+.support-band,
+.emergency-note {
+  background: var(--soft-stone);
+}
+
+.quote-section,
+.working-note,
+.site-footer {
+  background: var(--deep-forest);
+  color: var(--warm-white);
+}
+
+/* Cards and contained surfaces */
+.support-grid {
+  gap: 24px;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+.support-grid article,
+.support-grid article:nth-child(even),
+.fees-hero-card,
+.contact-form,
+.facts-featured {
+  padding: 32px;
+  border: 1px solid var(--soft-stone);
+  border-radius: 4px;
+  background: var(--white);
+  box-shadow: none;
+}
+
+.support-grid article,
+.support-grid article:nth-child(even) {
+  min-height: 0;
+}
+
+.principles-grid,
+.process-grid-home,
+.recognition-cards,
+.journey-steps,
+.approach-principles-list,
+.faq-list,
+.facts,
+.trust-list {
+  border-color: var(--soft-stone);
+}
+
+.principles-grid article,
+.process-grid-home article,
+.recognition-cards article,
+.journey-steps article,
+.approach-principles-list article,
+.faq-item,
+.facts div,
+.trust-list li {
+  border-color: var(--soft-stone);
+}
+
+.signal-mark,
+.process-node,
+.journey-steps-visual span {
+  border-color: var(--sage);
+  box-shadow: none;
+}
+
+.confirm-tag,
+.quote-section .eyebrow,
+.working-note .eyebrow {
+  border-radius: 4px;
+}
+
+.quote-section .eyebrow,
+.working-note .eyebrow {
+  background: transparent;
+  color: var(--warm-white);
+}
+
+/* Forms */
+.contact-form {
+  display: grid;
+  gap: 24px;
+}
+
+.form-field {
+  gap: 8px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid var(--soft-stone);
+  border-radius: 4px;
+  background: var(--white);
+}
+
+.contact-form textarea {
+  min-height: 192px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--deep-forest);
+  outline: 2px solid rgba(121, 131, 113, 0.35);
+  outline-offset: 2px;
+}
+
+/* Footer */
+.site-footer {
+  padding-block: 64px 24px;
+}
+
+.footer-grid p,
+.footer-grid .eyebrow {
+  color: var(--soft-stone);
+}
+
+.footer-bottom {
+  border-top-color: rgba(215, 221, 216, 0.45);
+}
+
+.footer-bottom a:last-child {
+  border-color: var(--soft-stone);
+  background: transparent;
+  color: var(--warm-white);
+}
+
+.footer-bottom a:last-child:hover,
+.footer-bottom a:last-child:focus-visible {
+  border-color: var(--warm-white);
+  background: var(--warm-white);
+  color: var(--deep-forest);
+}
+
+/* Accessibility and restrained motion */
+:focus-visible {
+  outline-color: rgba(121, 131, 113, 0.55);
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --shell: min(1200px, calc(100% - 128px));
+    --space-xl: 64px;
+    --space-2xl: 64px;
+  }
+
+  .intro-section,
+  .recognition,
+  .recognition-visual,
+  .process-section,
+  .about-preview,
+  .principles-band,
+  .approach-principles,
+  .support-band,
+  .journey-section,
+  .fees-section,
+  .fees-reassurance,
+  .contact-section,
+  .section {
+    padding-block: 64px;
+  }
+
+  .hero-grid,
+  .page-hero {
+    padding-block: 96px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .js .site-nav {
+    background: var(--deep-forest);
+    color: var(--warm-white);
+  }
+
+  .js .nav-list li,
+  .js .nav-list li:last-child {
+    border-color: rgba(215, 221, 216, 0.28);
+  }
+
+  .js .nav-list a {
+    color: var(--warm-white);
+    letter-spacing: 0;
+  }
+
+  .js .nav-list a[aria-current="page"],
+  .js .nav-location {
+    color: var(--soft-stone);
+  }
+
+  .js .nav-cta {
+    border-color: var(--warm-white);
+    background: var(--warm-white);
+    color: var(--deep-forest);
+  }
+
+  .support-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --shell: min(1200px, calc(100% - 48px));
+    --space-xl: 48px;
+    --space-2xl: 48px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 13vw, 3.75rem);
+  }
+
+  h2 {
+    font-size: clamp(2.25rem, 10vw, 2.75rem);
+  }
+
+  h3 {
+    font-size: clamp(1.625rem, 7vw, 2rem);
+  }
+
+  .intro-section,
+  .recognition,
+  .recognition-visual,
+  .process-section,
+  .about-preview,
+  .principles-band,
+  .approach-principles,
+  .support-band,
+  .journey-section,
+  .fees-section,
+  .fees-reassurance,
+  .contact-section,
+  .section {
+    padding-block: 48px;
+  }
+
+  .hero-grid,
+  .page-hero {
+    padding-block: 72px;
+  }
+
+  .hero-grid {
+    min-height: auto;
+  }
+
+  .button,
+  .nav-cta,
+  .footer-bottom a:last-child {
+    min-height: 48px;
+  }
+
+  .support-grid article,
+  .support-grid article:nth-child(even),
+  .fees-hero-card,
+  .contact-form,
+  .facts-featured {
+    padding: 24px;
+  }
+}
+
+@media print {
+  body {
+    background: var(--warm-white);
+    color: var(--logo-ink);
   }
 }
