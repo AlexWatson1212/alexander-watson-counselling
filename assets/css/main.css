@@ -3127,3 +3127,244 @@ blockquote {
     padding-block: 48px 56px;
   }
 }
+
+/* ================================================================
+   12. CROSS-SITE BRAND CONSISTENCY — AUTHORITATIVE FINAL LAYER
+   Shared typography, clearer navigation, button-style links and
+   softer image treatment. This layer intentionally wins the cascade.
+   ================================================================ */
+
+:root {
+  --display: "Instrument Serif", Georgia, serif;
+  --body: "Aileron", "Helvetica Neue", Arial, sans-serif;
+  --image-radius: 8px;
+  --soft-image-shadow: 0 16px 38px rgba(40, 58, 56, 0.08);
+  --control-shadow: 0 5px 14px rgba(40, 58, 56, 0.06);
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  color: var(--logo-ink);
+  font-family: var(--display) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+.eyebrow,
+.button,
+.nav-cta,
+.nav-list a,
+.text-link,
+.section-link a,
+.direct-contact a {
+  font-family: var(--body);
+}
+
+/* Clear, restrained buttons. Primary actions remain deep forest;
+   secondary and formerly text-only links become white controls. */
+.button,
+.nav-cta,
+.text-link,
+.section-link a,
+.direct-contact a,
+main p > a:only-child {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.74rem 1rem;
+  border: 1px solid var(--deep-forest);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--deep-forest);
+  box-shadow: var(--control-shadow);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button-primary,
+.nav-cta {
+  border-color: var(--deep-forest);
+  background: var(--deep-forest);
+  color: var(--warm-white);
+}
+
+.button:hover,
+.button:focus-visible,
+.nav-cta:hover,
+.nav-cta:focus-visible,
+.text-link:hover,
+.text-link:focus-visible,
+.section-link a:hover,
+.section-link a:focus-visible,
+.direct-contact a:hover,
+.direct-contact a:focus-visible,
+main p > a:only-child:hover,
+main p > a:only-child:focus-visible {
+  border-color: var(--logo-ink);
+  background: var(--logo-ink);
+  color: var(--warm-white);
+  box-shadow: none;
+  transform: none;
+}
+
+.text-link,
+.section-link a {
+  padding-bottom: 0.74rem;
+  border-bottom: 1px solid var(--deep-forest);
+}
+
+.text-link::after,
+.section-link a::after {
+  display: none;
+  content: none;
+}
+
+/* Navigation links read as deliberate controls rather than body copy. */
+.site-header {
+  border-bottom-color: rgba(215, 221, 216, 0.9);
+  background: rgba(247, 244, 239, 0.97);
+  box-shadow: 0 8px 24px rgba(40, 58, 56, 0.035);
+}
+
+@media (min-width: 901px) {
+  .nav-list {
+    gap: 8px;
+  }
+
+  .nav-list a {
+    min-height: 38px;
+    padding: 0.55rem 0.72rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--brand-charcoal);
+    font-size: 0.82rem;
+    font-weight: 650;
+  }
+
+  .nav-list a::after {
+    display: none;
+    content: none;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus-visible {
+    border-color: var(--soft-stone);
+    background: var(--white);
+    color: var(--deep-forest);
+  }
+
+  .nav-list a[aria-current="page"] {
+    border-color: rgba(121, 131, 113, 0.42);
+    background: var(--sage-pale);
+    color: var(--deep-forest);
+  }
+
+  .nav-cta {
+    min-height: 38px;
+    padding: 0.55rem 0.9rem;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .js .nav-list {
+    display: grid;
+    gap: 8px;
+    border: 0;
+  }
+
+  .js .nav-list li,
+  .js .nav-list li:last-child {
+    border: 0;
+  }
+
+  .js .nav-list a {
+    min-height: 52px;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(215, 221, 216, 0.28);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--warm-white);
+    text-decoration: none;
+  }
+
+  .js .nav-list a[aria-current="page"] {
+    border-color: rgba(215, 221, 216, 0.56);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--warm-white);
+  }
+
+  .js .nav-cta {
+    width: 100%;
+    min-height: 48px;
+    border-color: var(--warm-white);
+    background: var(--warm-white);
+    color: var(--deep-forest);
+  }
+}
+
+/* A slightly warmer, quieter photographic treatment across the site. */
+.hero-media,
+.about-preview-media,
+.image-frame,
+.page-hero-grid figure,
+.split-image figure,
+figure.image-frame {
+  overflow: hidden;
+  border-radius: var(--image-radius);
+  box-shadow: var(--soft-image-shadow);
+}
+
+main figure img,
+main picture img,
+main .hero-media img,
+main .about-preview-media img,
+main .image-frame img {
+  border-radius: inherit;
+  filter: saturate(0.88) contrast(0.94) brightness(1.02);
+}
+
+.hero-media::before {
+  border-color: rgba(247, 244, 239, 0.45);
+  border-radius: inherit;
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  main figure img,
+  main picture img,
+  main .hero-media img,
+  main .about-preview-media img,
+  main .image-frame img {
+    transition: filter 220ms ease;
+  }
+
+  main figure:hover img,
+  main picture:hover img {
+    filter: saturate(0.94) contrast(0.97) brightness(1.01);
+  }
+}
