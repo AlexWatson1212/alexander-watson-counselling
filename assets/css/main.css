@@ -3368,3 +3368,13 @@ main .image-frame img {
     filter: saturate(0.94) contrast(0.97) brightness(1.01);
   }
 }
+/* ================================================================
+   13. DARK-SURFACE TEXT CONTRAST — FINAL OVERRIDE
+   Keeps display text white wherever it sits on the deep-forest bands.
+   This intentionally follows the cross-site heading colour rule above.
+   ================================================================ */
+
+.quote-section blockquote,
+.working-note blockquote {
+  color: var(--warm-white);
+}
