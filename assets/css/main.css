@@ -3378,3 +3378,138 @@ main .image-frame img {
 .working-note blockquote {
   color: var(--warm-white);
 }
+
+/* ================================================================
+   14. CONTACT ACTIONS — PREMIUM BUTTON HIERARCHY
+   Keeps one unmistakable primary action, one quieter email action
+   and returns supporting legal links to an editorial text treatment.
+   ================================================================ */
+
+.contact-intro .direct-contact {
+  display: grid;
+  justify-items: start;
+  gap: 0.55rem;
+  margin-top: 1.75rem;
+}
+
+.contact-intro .direct-contact a {
+  min-height: 42px;
+  max-width: 100%;
+  padding: 0.68rem 0.95rem;
+  border-color: rgba(40, 58, 56, 0.42);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 4px 12px rgba(40, 58, 56, 0.045);
+  font-size: 0.86rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-intro .direct-contact a:hover,
+.contact-intro .direct-contact a:focus-visible {
+  border-color: var(--deep-forest);
+  background: var(--deep-forest);
+  color: var(--warm-white);
+}
+
+.contact-form .button,
+.contact-form button[type="submit"],
+.contact-form input[type="submit"] {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid var(--deep-forest);
+  border-radius: 4px;
+  background: var(--deep-forest);
+  color: var(--warm-white);
+  box-shadow: 0 7px 18px rgba(40, 58, 56, 0.12);
+  font-family: var(--body);
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.contact-form .button:hover,
+.contact-form .button:focus-visible,
+.contact-form button[type="submit"]:hover,
+.contact-form button[type="submit"]:focus-visible,
+.contact-form input[type="submit"]:hover,
+.contact-form input[type="submit"]:focus-visible {
+  border-color: var(--logo-ink);
+  background: var(--logo-ink);
+  color: var(--warm-white);
+  box-shadow: 0 9px 22px rgba(26, 33, 25, 0.16);
+  transform: translateY(-1px);
+}
+
+.contact-form .button:active,
+.contact-form button[type="submit"]:active,
+.contact-form input[type="submit"]:active {
+  box-shadow: 0 4px 10px rgba(26, 33, 25, 0.12);
+  transform: translateY(0);
+}
+
+.contact-form .form-note a,
+.contact-form .field-guidance a,
+.contact-form .form-consent a,
+.contact-form p > a:only-child {
+  display: inline;
+  width: auto;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(40, 58, 56, 0.42);
+  border-radius: 0;
+  background: transparent;
+  color: var(--deep-forest);
+  box-shadow: none;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.contact-form .form-note a:hover,
+.contact-form .form-note a:focus-visible,
+.contact-form .field-guidance a:hover,
+.contact-form .field-guidance a:focus-visible,
+.contact-form .form-consent a:hover,
+.contact-form .form-consent a:focus-visible,
+.contact-form p > a:only-child:hover,
+.contact-form p > a:only-child:focus-visible {
+  border-bottom-color: var(--deep-forest);
+  background: transparent;
+  color: var(--logo-ink);
+  box-shadow: none;
+}
+
+.contact-form .form-consent {
+  padding: 0.15rem 0;
+}
+
+.contact-form .form-consent input {
+  accent-color: var(--deep-forest);
+}
+
+@media (max-width: 767px) {
+  .contact-intro .direct-contact {
+    width: 100%;
+  }
+
+  .contact-intro .direct-contact a {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .contact-form .button,
+  .contact-form button[type="submit"],
+  .contact-form input[type="submit"] {
+    min-height: 50px;
+  }
+}
