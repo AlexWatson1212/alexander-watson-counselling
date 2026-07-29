@@ -3046,3 +3046,84 @@ body.home .site-header:not(.is-scrolled) {
     color: var(--logo-ink);
   }
 }
+
+/* ================================================================
+   11. SHARED BRAND TYPOGRAPHY + HOMEPAGE HERO SPACING
+   Authoritative cross-site alignment for July 2026.
+   Instrument Serif is used for headings; Aileron is used everywhere else.
+   The homepage hero no longer fills the viewport or carries 160px top padding.
+   ================================================================ */
+
+:root {
+  --display: "Instrument Serif", Georgia, serif;
+  --body: "Aileron", "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  font-family: var(--display) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+h1 {
+  line-height: 1.15 !important;
+}
+
+h2 {
+  line-height: 1.2 !important;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3 !important;
+}
+
+blockquote {
+  line-height: 1.2;
+}
+
+/* Close the excessive space below the navigation on the homepage only. */
+@media (min-width: 1280px) {
+  .hero-grid {
+    min-height: auto;
+    padding-block: 64px 80px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+  .hero-grid {
+    min-height: auto;
+    padding-block: 56px 72px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .hero-grid {
+    min-height: auto;
+    padding-block: 56px 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-grid {
+    min-height: auto;
+    padding-block: 48px 56px;
+  }
+}
