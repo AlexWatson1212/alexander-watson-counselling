@@ -9,13 +9,11 @@ markdown: kramdown
 permalink: pretty
 
 # Contact
-# Add a public practice email before launch.
-email:
-# Add the endpoint only when a secure form provider has been selected and tested.
-contact_form_endpoint:
-# Example: "two working days"
-enquiry_response_time:
-# Example: "Monday to Friday, 9am to 5pm"
+email: alexanderclivewatson@gmail.com
+contact_form_endpoint: "https://formspree.io/f/xrendzal"
+enquiry_response_time: "two working days"
+enquiry_retention_summary: "is retained securely only for as long as necessary, in line with my privacy notice"
+# Complete once regular contact hours have been established.
 contact_working_hours:
 
 # Practical details
