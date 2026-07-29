@@ -1,25 +1,21 @@
-{% comment %}
-Optional _config.yml fields used on this page:
-training_course, training_provider, expected_qualification_date,
-professional_membership, supervision_summary, about_personal_note,
-practice_location, session_fee, session_length, enquiry_response_time
-{% endcomment %}
+{% comment %}Optional _config.yml fields used on this page:training_course, training_provider, expected_qualification_date,professional_membership, supervision_summary, about_personal_note,practice_location, session_fee, session_length, enquiry_response_time{% endcomment %}
 
 <section class="page-hero page-hero-about">
   <div class="shell page-hero-grid">
     <div>
       <p class="eyebrow">About</p>
-      <h1>I am interested in the person beneath the coping strategies.</h1>
-      <p class="lede">How you learned to survive, what those adaptations have protected, and what might become possible when you no longer have to carry everything in the same way.</p>
+      <h1>I am interested in what life is like beneath the ways you have learned to cope.</h1>
+      <p class="lede">You may be the person other people rely on, while privately feeling overwhelmed, self-critical or unsure how to ask for what you need. Counselling offers somewhere you do not have to keep presenting the capable version of yourself.</p>
     </div>
 
-    <figure class="image-frame portrait-frame">
-      <img
-        src="{{ '/assets/images/portraits/home-about-alexander-watson-portrait.webp' | relative_url }}"
-        width="1200"
-        height="1500"
-        alt="Portrait of Alexander Watson">
-    </figure>
+<figure class="image-frame portrait-frame">
+  <img
+    src="{{ '/assets/images/portraits/home-about-alexander-watson-portrait.webp' | relative_url }}"
+    width="1200"
+    height="1500"
+    alt="Portrait of Alexander Watson">
+</figure>
+
   </div>
 </section>
 
@@ -30,60 +26,63 @@ practice_location, session_fee, session_length, enquiry_response_time
       <h2 id="training-title">Where I am in my training.</h2>
     </div>
 
-    <div class="prose prose-large">
-      <p>I am currently training as a counsellor and work with adults under regular supervision. I have placed this information near the top of the page because you should know who you would be sitting with before deciding whether to contact me.</p>
+<div class="prose prose-large">
+  <p>I am currently training as a counsellor and work with adults under regular supervision. I believe you should have clear information about my professional position before deciding whether to contact me.</p>
 
-      {% if site.training_course or site.training_provider or site.expected_qualification_date or site.professional_membership or site.supervision_summary %}
-      <dl class="facts">
-        {% if site.training_course %}
-        <div>
-          <dt>Training</dt>
-          <dd>{{ site.training_course }}{% if site.training_provider %}, {{ site.training_provider }}{% endif %}</dd>
-        </div>
-        {% elsif site.training_provider %}
-        <div>
-          <dt>Training provider</dt>
-          <dd>{{ site.training_provider }}</dd>
-        </div>
-        {% endif %}
-
-        {% if site.expected_qualification_date %}
-        <div>
-          <dt>Expected qualification</dt>
-          <dd>{{ site.expected_qualification_date }}</dd>
-        </div>
-        {% endif %}
-
-        {% if site.professional_membership %}
-        <div>
-          <dt>Professional membership</dt>
-          <dd>{{ site.professional_membership }}</dd>
-        </div>
-        {% endif %}
-
-        {% if site.supervision_summary %}
-        <div>
-          <dt>Supervision</dt>
-          <dd>{{ site.supervision_summary }}</dd>
-        </div>
-        {% endif %}
-      </dl>
-      {% endif %}
+  {% if site.training_course or site.training_provider or site.expected_qualification_date or site.professional_membership or site.supervision_summary %}
+  <dl class="facts">
+    {% if site.training_course %}
+    <div>
+      <dt>Training</dt>
+      <dd>{{ site.training_course }}{% if site.training_provider %}, {{ site.training_provider }}{% endif %}</dd>
     </div>
+    {% elsif site.training_provider %}
+    <div>
+      <dt>Training provider</dt>
+      <dd>{{ site.training_provider }}</dd>
+    </div>
+    {% endif %}
+
+    {% if site.expected_qualification_date %}
+    <div>
+      <dt>Expected qualification</dt>
+      <dd>{{ site.expected_qualification_date }}</dd>
+    </div>
+    {% endif %}
+
+    {% if site.professional_membership %}
+    <div>
+      <dt>Professional membership</dt>
+      <dd>{{ site.professional_membership }}</dd>
+    </div>
+    {% endif %}
+
+    {% if site.supervision_summary %}
+    <div>
+      <dt>Supervision</dt>
+      <dd>{{ site.supervision_summary }}</dd>
+    </div>
+    {% endif %}
+  </dl>
+  {% endif %}
+</div>
+
   </div>
 </section>
 
 <section class="section section-border-top">
   <div class="shell split split-wide">
     <div>
-      <p class="eyebrow">How I work</p>
-      <h2>Careful attention, useful questions and honest reflection.</h2>
+      <p class="eyebrow">How I am with clients</p>
+      <h2>You do not have to make yourself easy to understand.</h2>
     </div>
 
-    <div class="prose prose-large">
-      <p>I bring curiosity, steadiness and honesty to the room. I will not hand you a theory about who you are. We work out together what is actually happening, in language that feels accurate to you.</p>
-      <p>I value depth, but not unnecessary complexity. Sometimes the most meaningful change begins with finding simple language for something you have felt for years.</p>
-    </div>
+<div class="prose prose-large">
+  <p>You might arrive with a clear story, scattered thoughts, strong feelings or no idea where to begin. You may lose your train of thought, go quiet or find that the words do not quite match the experience. None of that means you are doing counselling badly.</p>
+  <p>I bring curiosity, steadiness and honesty to the room. I listen closely, ask questions where they may help and offer what I notice without handing you a fixed theory about who you are.</p>
+  <p>I value depth, but not unnecessary complexity. The work should eventually connect back to your life: how you speak to yourself, relate to other people, make decisions and respond when something feels difficult.</p>
+</div>
+
   </div>
 </section>
 
@@ -91,27 +90,29 @@ practice_location, session_fee, session_length, enquiry_response_time
   <div class="shell">
     <div class="principles-heading">
       <p class="eyebrow">What you can expect</p>
-      <h2 id="about-principles-title">What it is like to work with me.</h2>
+      <h2 id="about-principles-title">A relationship in which you can be more honest.</h2>
     </div>
 
-    <div class="principles-grid">
-      <article>
-        <h3>Thoughtful</h3>
-        <p>We slow down enough to notice what is actually happening rather than reaching for a quick explanation.</p>
-      </article>
-      <article>
-        <h3>Collaborative</h3>
-        <p>You remain the authority on your experience. My role is to help you see it from new and useful angles.</p>
-      </article>
-      <article>
-        <h3>Direct</h3>
-        <p>I will say what I notice: honest without being harsh, and clear without reducing you to a simple answer.</p>
-      </article>
-    </div>
+<div class="principles-grid">
+  <article>
+    <h3>Room to be uncertain</h3>
+    <p>You do not need a polished explanation or a fixed goal. We can begin with the part of the experience you can reach.</p>
+  </article>
+  <article>
+    <h3>Shared understanding</h3>
+    <p>You remain the authority on your experience. We work together to find language and meaning that genuinely fit.</p>
+  </article>
+  <article>
+    <h3>Honest reflection</h3>
+    <p>I will say what I notice carefully and directly. You can disagree, correct me or tell me when something does not feel useful.</p>
+  </article>
+</div>
+
   </div>
 </section>
 
 {% if site.about_personal_note %}
+
 <section class="section section-border-top" aria-labelledby="personal-note-title">
   <div class="shell split split-wide">
     <div>
@@ -129,10 +130,10 @@ practice_location, session_fee, session_length, enquiry_response_time
   <div class="shell cta-grid">
     <div>
       <p class="eyebrow">Next step</p>
-      <h2 id="about-cta-title">If you would like to talk.</h2>
+      <h2 id="about-cta-title">Deciding whether I may be the right person.</h2>
     </div>
     <div class="cta-copy">
-      <p>Send a short message and we can arrange a no-obligation introductory conversation.</p>
+      <p>Send a short message and we can arrange a no-obligation introductory conversation. You can tell me a little about what brings you, ask questions and notice how it feels to speak together.</p>
       {% if site.enquiry_response_time %}
       <p>I reply within {{ site.enquiry_response_time }}.</p>
       {% endif %}
