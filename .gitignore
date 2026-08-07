@@ -1,0 +1,10 @@
+/node_modules
+/.next/
+/out/
+/dist/
+/.wrangler/
+/.sites-runtime/
+/.env*
+/coverage
+npm-debug.log*
+next-env.d.ts

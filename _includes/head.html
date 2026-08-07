@@ -3,13 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>
-  {% if page.title and page.title != "Home" %}
-    {{ page.title }} · {{ site.title }}
-  {% else %}
-    {{ site.title }} · Calm websites for therapists
-  {% endif %}
-</title>
+<title>{% if page.title and page.title != "Home" %}{{ page.title | escape }} · {{ site.title | escape }}{% else %}{{ site.title | escape }} · Calm websites for therapists{% endif %}</title>
 
 <meta
   name="description"
