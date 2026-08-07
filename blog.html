@@ -1,0 +1,109 @@
+---
+layout: default
+title: Journal | Alexander Watson Studio
+description: Practical reflections on therapist websites, private-practice clarity and building online trust.
+permalink: /blog/
+---
+
+<section class="acw-section acw-blog-hero acw-surface-paper">
+  <div class="acw-container acw-blog-hero-grid">
+    <div class="acw-blog-hero-copy">
+      <p class="acw-section-label">Journal</p>
+      <h1>Writing for therapists who have to describe their own work.</h1>
+      <p>
+        Short, useful articles on therapist websites, professional identity and
+        the choices that help an online presence feel like your work.
+      </p>
+      <a class="acw-library-text-link" href="{{ '/practice-clarity/' | relative_url }}">
+        Explore the Practice Clarity Library
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <figure class="acw-blog-hero-media">
+      <img
+        src="{{ '/assets/images/brand/therapist-identity-notes.webp' | relative_url }}"
+        alt="Annotated positioning notes and working materials arranged on the studio desk"
+        width="1122"
+        height="1402"
+        fetchpriority="high"
+        decoding="async"
+      >
+    </figure>
+  </div>
+</section>
+
+<section class="acw-section acw-blog-index acw-surface-recessed">
+  <div class="acw-container">
+    <div class="acw-blog-index-heading">
+      <p class="acw-section-label">Journal</p>
+      <h2>Each of these should help you decide something.</h2>
+      <p>
+        Reflections to help you understand your practice, communicate it with
+        more confidence and make thoughtful choices about your website.
+      </p>
+    </div>
+
+    {% assign journal_posts = site.posts | where_exp: "post", "post.slug != 'beyond-counselling-directory'" %}
+    {% if journal_posts.size > 0 %}
+      <div class="acw-blog-index-grid">
+        {% for post in journal_posts %}
+          <article class="acw-blog-index-card">
+            <div class="acw-blog-index-card-copy">
+              {% assign post_read_time = post.reading_time | default: post.read_time %}
+              {% if post_read_time %}
+                <p class="acw-blog-meta">{{ post_read_time }}</p>
+              {% endif %}
+
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+
+              <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 22 }}</p>
+
+              <a class="acw-library-card-link" href="{{ post.url | relative_url }}">
+                Read article
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <a href="{{ post.url | relative_url }}" class="acw-blog-index-image" aria-label="Read {{ post.title }}">
+              {% if post.hero_image %}
+                <img src="{{ post.hero_image | relative_url }}" alt="" loading="lazy" decoding="async">
+              {% else %}
+                <img src="{{ '/assets/images/brand/practice-clarity-workspace.webp' | relative_url }}" alt="" loading="lazy" decoding="async">
+              {% endif %}
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="acw-library-empty">
+        <h3>The Journal is being prepared.</h3>
+        <p>New articles will appear here shortly.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="acw-section acw-blog-clarity-cta acw-surface-ink">
+  <div class="acw-container acw-blog-clarity-cta-card">
+    <div>
+      <p class="acw-section-label">Practice Clarity Studio</p>
+      <h2>The strongest therapist websites begin before the design.</h2>
+      <p>
+        Practice Clarity gives your identity, language and website strategy a
+        practical foundation before those decisions are expressed through design.
+      </p>
+    </div>
+
+    <div class="acw-blog-clarity-cta-actions">
+      <a class="acw-btn acw-btn-primary" href="{{ '/service/' | relative_url }}">
+        Explore Practice Clarity Studio
+      </a>
+
+      <a class="acw-library-text-link" href="{{ '/practice-clarity/' | relative_url }}">
+        Browse the Practice Clarity Library
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

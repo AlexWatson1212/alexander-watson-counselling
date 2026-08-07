@@ -1,56 +1,65 @@
-title: Alexander Watson Counselling
-description: Thoughtful, person-centred counselling for adults in Greater Manchester and online.
-url: https://alexanderwatsoncounselling.co.uk
+title: "Alexander Watson"
+description: "Helping therapists become easier to trust online through thoughtful positioning, clear messaging and websites that genuinely reflect the work behind them."
+
+url: "https://alexanderwatson.co.uk"
 baseurl: ""
+
 lang: en-GB
 timezone: Europe/London
 
 markdown: kramdown
-permalink: pretty
 
-# Contact
-email: alexanderclivewatson@gmail.com
-contact_form_endpoint: "https://formspree.io/f/xrendzal"
-enquiry_response_time: "two working days"
-enquiry_retention_summary: "is retained securely only for as long as necessary, in line with my privacy notice"
-# Complete once regular contact hours have been established.
-contact_working_hours:
+kramdown:
+  input: GFM
 
-# Practical details
-# Complete these before publicly listing private-practice availability.
-practice_location:
-session_length:
-session_fee:
-introductory_call:
-introductory_call_length:
-introductory_call_format:
-session_frequency:
-availability_summary:
-in_person_details:
-payment_summary:
-cancellation_summary:
-reduced_fee_summary:
-online_platform:
-waiting_list_summary:
-review_frequency:
+future: true
 
-# Professional position
-training_course: Level 4 Diploma in Therapeutic Counselling
-training_provider: Stockport College
-expected_qualification_date: June 2027
-professional_membership:
-supervision_summary: Client work is discussed regularly with a qualified counselling supervisor.
-about_personal_note:
+permalink: /:title/
 
-# Website privacy
-analytics_enabled: false
-non_essential_cookies: false
-use_google_fonts: true
-hosting_provider:
-privacy_last_updated: 28 July 2026
+collections:
+  guides:
+    output: true
+    permalink: /guides/:name/
+
+plugins:
+  - jekyll-sitemap
+
+include:
+  - _redirects
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: "/assets/images/brand/og-image.jpg"
+
+  -
+    scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: guide
+      category: "Practice Clarity"
+      image: "/assets/images/brand/og-image.jpg"
 
 exclude:
   - README.md
-  - docs
+  - VISUAL-SYSTEM.md
+  - PHOTOGRAPHY-SHOT-LIST.md
+  - INSTALLATION.md
   - Gemfile
   - Gemfile.lock
+  - netlify.toml
+  - node_modules
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - _site
+  - assets/images/image-library
+  - package.json
+  - package-lock.json
+
+  # Legacy pages retained for reference only.
+  - legacy
+  - _legacy

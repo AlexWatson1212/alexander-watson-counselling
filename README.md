@@ -1,52 +1,87 @@
-# Alexander Watson Counselling — refinement package
+# Alexander Watson Studio content consolidation
 
-## What changed
+The current visual-system rules are documented in `VISUAL-SYSTEM.md` and implemented in `assets/css/visual-system.css`. The real-artefact image brief and replacement filenames are in `PHOTOGRAPHY-SHOT-LIST.md`.
 
-- Reduced the homepage hero to two visual text systems: Instrument Serif for display headings and Manrope for all supporting copy.
-- Converted “How we might work together” into a secondary button.
-- Gave the hero a very light sage-grey background so it no longer merges into the header.
-- Introduced a restrained muted-clay accent for high-intent “Begin a conversation” actions.
-- Replaced two text-heavy homepage sections with a three-card recognition pattern and a connected three-stage process diagram.
-- Kept the About page intentionally concise.
-- Rebuilt the Support topics into a centred, consistent three-column card grid.
-- Added a new image-led hero to Working Together and made its process feel like a visual timeline.
-- Added a visual “At a glance” card to Fees without inventing unconfirmed information.
-- Improved the form structure, guidance, consent wording, disabled pre-launch state and configurable endpoint.
-- Styled the final footer link as a clear CTA without changing the unavailable footer markup.
+Use `INSTALLATION.md` for the exact replacement and legacy-file removal order. The final package omits the unused `assets/images/image-library` working folder so the source remains small enough to upload and deploy comfortably.
 
-## New image required
+This source set completes the consolidation into two public content surfaces:
 
-### Filename
+- **Practice Clarity Library** at `/practice-clarity`
+- **Journal** at `/blog/`
 
-`assets/images/working-together/working-together-two-chairs-soft-light.webp`
+## What is included
 
-### Midjourney prompt
+- Shared `default`, `guide` and `post` layouts.
+- Current header and footer partials using **Practice Clarity Library** and **Journal** consistently.
+- The four shared Practice Clarity progress, navigation, roadmap and summary includes used by the principle files.
+- The Library index with nine complete principle destinations.
+- Two evergreen practical Library guides:
+  - *How to Optimise Your Counselling Directory Profile*
+  - *Beyond Counselling Directory: How to Build a More Sustainable Private Practice*
+- The Journal index with dates removed from cards. Dates remain available on individual article pages.
+- Shared contextual routes from every guide and Journal article into the Service and Work pages.
+- Home, Service and About pages with FAQs consolidated:
+  - Home links to the complete Service FAQ instead of repeating it.
+  - Service contains the full scope, process, pricing, ownership and aftercare FAQ.
+  - About retains only questions about Alexander's background, experience and location.
+- Redirect rules for retired Library, Practice Notes and Counselling Directory URLs.
 
-Quiet contemporary counselling room in Greater Manchester, two comfortable upholstered chairs angled gently toward one another with respectful space between them, warm natural morning light through a linen curtain, muted sage, warm off-white, oak and soft charcoal palette, calm editorial interior photography, thoughtful and human rather than clinical, subtle lived-in texture, no people, no therapy clichés, no staged corporate decor, restrained composition, soft realistic shadows, premium independent practice website aesthetic, photographed on a full-frame camera, 50mm lens, natural colour grading --ar 7:5 --style raw --v 7
+## Drop-in locations
 
-### Export specification
+Copy the files into the equivalent paths in the Jekyll project:
 
-- Crop: 7:5 landscape
-- Recommended source export: 1680 × 1200 px or larger
-- Website format: WebP
-- Keep the two chairs and the space between them inside the central 70% of the image so mobile cropping remains safe.
+| File in this folder | Destination |
+| --- | --- |
+| `_layouts/default.html` | `_layouts/default.html` |
+| `_layouts/guide.html` | `_layouts/guide.html` |
+| `_layouts/post.html` | `_layouts/post.html` |
+| `_includes/*.html` | `_includes/` |
+| `_guides/*.md` | `_guides/` |
+| `practice-clarity.html` | the source page for `/practice-clarity` |
+| `blog.html` | the source page for `/blog/` |
+| `index.html` | the homepage source |
+| `service.html` | the Service page source |
+| `about.html` | the About page source |
+| `_redirects` | project root |
 
-## Existing images retained
+## Important migration step
 
-- `assets/images/home/home-hero-winding-path-landscape.webp`
-- `assets/images/portraits/home-about-alexander-watson-portrait.webp`
-- `assets/images/approach/approach-reflection-landscape.webp`
-- `assets/images/support/support-window-soft-daylight.webp`
-- `assets/images/support/support-woodland-path-soft-landscape.webp`
+Delete the old `_posts` source for `beyond-counselling-directory` after adding
+`_guides/beyond-counselling-directory.md`. Leaving both files in place would
+publish duplicate copies of the same article. The supplied index templates
+exclude the old post defensively, but it should still be removed from `_posts`.
 
-## Files still required for a complete production update
+The Counselling Directory profile guide now uses the canonical URL:
 
-1. `_includes/footer.html` — needed to replace the footer text link with proper button markup rather than relying only on CSS styling.
-2. `_config.yml` — needed to set `email` and `contact_form_endpoint` and confirm the production site URL.
-3. The chosen form provider or endpoint — for example, a hosted form service or a serverless form handler. The form remains safely disabled until `site.contact_form_endpoint` exists.
-4. Final session length, fee, availability and cancellation policy.
-5. Final Greater Manchester crisis and emergency guidance and reviewed privacy wording.
+`/practice-clarity/counselling-directory-profile/`
 
-## Installation
+## Jekyll and Netlify checks
 
-Replace the matching page/include files and copy `main.css` to `assets/css/main.css`. Add the new Working Together image at the exact path above. Test the site at desktop, tablet and mobile widths before deployment.
+The existing `guides` collection must continue to output files. A typical
+configuration is:
+
+```yaml
+collections:
+  guides:
+    output: true
+```
+
+Jekyll may ignore a root file whose name begins with an underscore. If the
+generated `_site` folder does not contain `_redirects`, add this to `_config.yml`:
+
+```yaml
+include:
+  - _redirects
+```
+
+If `_config.yml` already has an `include` list, add `_redirects` to that list
+rather than creating a second `include` key.
+
+After copying the files:
+
+1. Run the normal Jekyll build.
+2. Confirm `_site/_redirects` exists.
+3. Confirm all 11 Library guide URLs build: nine principles plus two practical guides.
+4. Confirm `/beyond-counselling-directory/` redirects to its new Library URL.
+5. Confirm Journal cards show reading time but no publication date.
+6. Confirm the mobile navigation opens on guide and Journal article pages.
