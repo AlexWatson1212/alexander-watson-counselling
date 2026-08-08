@@ -1,9 +1,10 @@
 {
-  "name": "alexander-watson-counselling-new",
+  "name": "alexander-watson-counselling",
   "version": "0.1.0",
   "private": true,
-  "displayName": "Alexander Watson Counselling",
-  "engines": { "node": ">=22.13.0" },
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
     "install:ci": "bash scripts/install-ci.sh",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
@@ -33,5 +34,6 @@
     "vite": "8.0.13",
     "wrangler": "4.92.0"
   },
-  "type": "module"
+  "type": "module",
+  "displayName": "Alexander Watson Counselling"
 }

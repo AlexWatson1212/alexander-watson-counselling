@@ -1,17 +1,21 @@
 # Alexander Watson Counselling
 
-A self-contained counselling website built from Alexander's Practice Clarity document and visual identity system.
+A distinctive, accessible counselling website built around Alexander's direct, thoughtful and neurodivergent-aware way of working.
 
 ## Included
 
-- Responsive one-page website
-- Reusable header, footer and enquiry-form components
-- Mobile navigation and accessible focus states
-- SEO metadata, favicon, robots file and sitemap
+- Responsive single-page website with editorial visual direction
+- Supplied professional photography, logos and favicons
+- Clear positioning, approach, fit, practical information and FAQs
+- Accessible mobile navigation, native FAQ controls and visible focus states
+- Privacy-conscious enquiry form that opens the visitor's email application
+- SEO, social metadata, structured data, robots file and sitemap
 - Production build and hosting configuration
 
-## Before replacing the current public site
+## Important before launch
 
-Review the current fee, availability, exact training/membership wording and preferred public enquiry email. An authentic portrait can be added later without changing the structure.
+Confirm the public fee, current availability, exact training or membership wording, location wording and preferred public enquiry email. See `HANDOVER.md` for the complete asset inventory and launch checklist.
 
-The main copy is in `app/page.tsx`; reusable components are in `app/components`; design and responsive behaviour are in `app/globals.css`.
+## Why the current public URL shows this document
+
+GitHub Pages is publishing the repository source instead of a built website. This application must be deployed through a compatible application host. Do not publish the `main` branch root as a GitHub Pages/Jekyll site.
