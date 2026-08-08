@@ -1,0 +1,34 @@
+ALEXANDER WATSON COUNSELLING — GITHUB PAGES DEPLOYMENT
+
+This ZIP is a complete static website. Put its contents directly in the root of
+the GitHub repository (alongside .git), not inside another folder.
+
+1. Make sure the terminal is in the repository:
+   C:\Users\mytro\Desktop\Sites\alexander-watson-counselling
+
+2. Extract every file from this ZIP into that folder, replacing the old project
+   files. Keep the hidden .nojekyll file.
+
+3. Run these commands separately, pressing Enter after each one:
+
+   git status
+   git add -A
+   git commit -m "Publish new counselling website"
+   git push origin main
+
+4. On GitHub, open the repository and choose:
+   Settings > Pages > Build and deployment
+
+   Source: Deploy from a branch
+   Branch: main
+   Folder: / (root)
+   Then click Save.
+
+5. In Settings > Pages, confirm the custom domain is:
+   alexanderwatsoncounselling.co.uk
+
+6. Wait a few minutes, then open:
+   https://alexanderwatsoncounselling.co.uk/
+
+If the old documentation still appears, refresh with Ctrl+F5. GitHub Pages can
+take several minutes to publish a new commit.
