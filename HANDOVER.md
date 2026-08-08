@@ -2,7 +2,11 @@
 
 ## Creative direction
 
-The design is editorial, grounded and quietly confident. Deep forest, warm paper and a restrained rust accent create warmth without turning the practice into a generic beige wellness brand. The copy remains client-centred while making Alexander's engaged, direct and neurodivergent-aware way of working unmistakable.
+The design is editorial, grounded and quietly confident. The palette is taken directly from the supplied identity artwork: the mark ink `#1A2119`, the mark light `#DFE0D8`, a deep forest green and a warm paper cream. There is no accent colour outside that family — the earlier rust accent has been removed because it did not appear anywhere in the supplied assets. Warmth comes from the paper tone, the photography and the typography rather than from a decorative colour.
+
+Typography is self-hosted and dependency-free. Display type is **Newsreader** (72pt optical instance), chosen because its stroke contrast and sharp serifs echo the `ALEXANDER` wordmark; practical text is **Instrument Sans**. Both are SIL Open Font License faces, subset to Latin and served as WOFF2 from `assets/fonts/` — no external font request, no build step. Licence text is in `assets/fonts/OFL.txt`.
+
+Restraint does the work: small all-caps labels appear only on the sections the navigation points at, the repeated section numbers have gone, and most hairline rules have been removed so the ones that remain read as deliberate. The copy remains client-centred while making Alexander's engaged, direct and neurodivergent-aware way of working unmistakable.
 
 The wider seated portrait leads the site because it gives visitors an immediate sense of Alexander in a calm, professional setting. The closer portrait supports the more personal About section. Both are real photographs; no stock or generated therapy imagery is used.
 
@@ -11,14 +15,25 @@ The wider seated portrait leads the site because it gives visitors an immediate 
 | Supplied file | Final filename | Action | Website use | Dimensions / ratio | Alt text |
 | --- | --- | --- | --- | --- | --- |
 | `alexander-watson-counselling-card(2).webp` | `alexander-watson-counsellor-hero.webp` | Renamed; retained as WebP | Homepage hero and temporary social preview | 1448 × 1086 supplied; displayed at 4:5 with responsive crop | `Alexander Watson seated in a calm counselling room` |
-| `alexander-watson-headshot.webp` | `alexander-watson-counsellor-portrait.webp` | Renamed; retained as WebP | About section | 1254 × 1254; 1:1 | `Portrait of Alexander Watson` |
+| `alexander-watson-headshot.webp` | `alexander-watson-counsellor-portrait.webp` | Renamed; retained as WebP | About section | 1254 × 1254 supplied; displayed at 4:5 on desktop, 1:1 below 940px | `Portrait of Alexander Watson` |
 | `alexander-watson-primary-logo(1).svg` | `alexander-watson-primary-logo.svg` | Renamed; retained as SVG | Header brand mark | 2000 × 500 viewBox; 4:1 | Empty alt inside a link labelled `Alexander Watson Counselling, home` |
 | `Alexander-Watson-Alternate-logo.svg` | `alexander-watson-alternate-logo.svg` | Renamed; retained as SVG | Footer brand mark | 2000 × 500 viewBox; 4:1 | Empty alt; nearby text identifies the practice |
-| `Alexander-Watson-Submark.svg` | `alexander-watson-submark.svg` | Renamed; retained as SVG | Training and accountability detail | 2000 × 1890 viewBox; near-square | Empty alt; decorative |
+| `Alexander-Watson-Submark.svg` | `alexander-watson-submark.svg` | Renamed; retained as SVG | Editorial interlude between the recognition and approach sections | 2000 × 1890 viewBox; near-square | Empty alt; decorative |
 | `favicon.png` | `favicon-64x64.png` | Renamed | Browser icon | 64 × 64; 1:1 | Not applicable |
 | `favicon-32x32.png` | `favicon-32x32.png` | Kept | Browser icon | 32 × 32; 1:1 | Not applicable |
 | `favicon-16x16.png` | `favicon-16x16.png` | Kept | Browser icon | 16 × 16; 1:1 | Not applicable |
 | Public-site screenshot | Not included in production | Retired | Audit evidence only | 1902 × 930 | Not applicable |
+
+Type is the only asset added in this revision:
+
+| File | Family | Instance | Size | Licence |
+| --- | --- | --- | --- | --- |
+| `assets/fonts/newsreader-display-400.woff2` | Newsreader | 72pt optical, 400 | 19 KB | OFL 1.1 |
+| `assets/fonts/newsreader-text-400.woff2` | Newsreader | 16pt optical, 400 | 20 KB | OFL 1.1 |
+| `assets/fonts/instrument-sans-400.woff2` | Instrument Sans | 400 | 15 KB | OFL 1.1 |
+| `assets/fonts/instrument-sans-600.woff2` | Instrument Sans | 600 | 15 KB | OFL 1.1 |
+
+All four are Latin subsets instanced from the variable sources. Total added weight is roughly 69 KB, loaded from the same origin with `font-display: swap` and a system serif/sans fallback stack behind them.
 
 ## Images still to create
 

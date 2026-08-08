@@ -6,6 +6,7 @@
     <title>Alexander Watson Counselling | Greater Manchester &amp; Online</title>
     <meta name="description" content="Thoughtful, honest counselling for adults who understand themselves in theory but still feel stuck underneath. Based in Greater Manchester and working online.">
     <meta name="theme-color" content="#f3efe7">
+    <meta name="color-scheme" content="light">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://alexanderwatsoncounselling.co.uk/">
 
@@ -27,6 +28,9 @@
     <link rel="icon" href="assets/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="assets/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="assets/favicon-64x64.png" sizes="64x64" type="image/png">
+
+    <link rel="preload" href="assets/fonts/newsreader-display-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/site.css">
     <script src="assets/site.js" defer></script>
 
@@ -81,9 +85,9 @@
 
     <main id="main-content">
       <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="site-shell hero-grid">
+        <div class="hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow">Counselling in Greater Manchester and online</p>
+            <p class="label">Counselling in Greater Manchester and online</p>
             <h1 id="hero-title">You have probably thought about it enough.</h1>
             <p class="hero-intro">Counselling for adults who understand themselves in theory, keep functioning in public, and still feel stuck underneath.</p>
             <div class="hero-actions">
@@ -94,49 +98,40 @@
           </div>
 
           <figure class="hero-portrait">
-            <div class="image-frame">
-              <img src="assets/alexander-watson-counsellor-hero.webp" width="1448" height="1086" alt="Alexander Watson seated in a calm counselling room" fetchpriority="high">
-            </div>
-            <figcaption><span>Alexander Watson</span><span>Counsellor in training</span></figcaption>
+            <img src="assets/alexander-watson-counsellor-hero.webp" width="1448" height="1086" alt="Alexander Watson seated in a calm counselling room" fetchpriority="high">
+            <figcaption>Alexander Watson, counsellor in training</figcaption>
           </figure>
         </div>
       </section>
 
       <section class="opening-note" aria-label="A note before you begin">
-        <div class="site-shell opening-note-grid">
-          <p class="eyebrow eyebrow-light">Before you begin</p>
+        <div class="site-shell">
           <p>You do not have to turn yourself into a clear, manageable case before another person is allowed to take you seriously.</p>
         </div>
       </section>
 
       <section class="section recognition" id="is-this-you" aria-labelledby="recognition-title">
         <div class="site-shell">
-          <div class="split-heading">
-            <p class="eyebrow">You may recognise this</p>
-            <div>
-              <h2 id="recognition-title">Knowing why has not made it stop.</h2>
-              <p class="section-intro">Self-awareness can be useful. It can also become one more way to stay at a distance from what you actually feel.</p>
-            </div>
+          <div class="section-head">
+            <p class="label">Is this you?</p>
+            <h2 id="recognition-title">Knowing why has not made it stop.</h2>
+            <p class="section-intro">Self-awareness can be useful. It can also become one more way to stay at a distance from what you actually feel.</p>
           </div>
 
           <div class="recognition-list">
-            <article class="recognition-item">
-              <span class="item-number" aria-hidden="true">01</span>
+            <article>
               <h3>You understand the pattern. It still has hold of you.</h3>
               <p>You may be able to explain exactly where a response comes from, yet find yourself living it again when the pressure returns.</p>
             </article>
-            <article class="recognition-item">
-              <span class="item-number" aria-hidden="true">02</span>
+            <article>
               <h3>You look capable because you have become very good at coping.</h3>
               <p>Other people may not see the effort, the exhaustion or how much of yourself you edit to keep everything working.</p>
             </article>
-            <article class="recognition-item">
-              <span class="item-number" aria-hidden="true">03</span>
+            <article>
               <h3>You are tired of treating yourself like a problem to solve.</h3>
               <p>Another label, strategy or demand to improve may explain something without helping you feel more at home in your own life.</p>
             </article>
-            <article class="recognition-item">
-              <span class="item-number" aria-hidden="true">04</span>
+            <article>
               <h3>Something matters, even if you cannot explain it neatly.</h3>
               <p>It might be grief, anger, loneliness, responsibility, a loss of purpose—or simply the sense that you have drifted away from yourself.</p>
             </article>
@@ -144,12 +139,10 @@
         </div>
       </section>
 
-      <section class="editorial-statement" aria-labelledby="statement-title">
-        <div class="site-shell editorial-statement-grid">
-          <div>
-            <p class="eyebrow eyebrow-light">A different kind of conversation</p>
-            <h2 id="statement-title">Insight matters. But insight is not the same as change.</h2>
-          </div>
+      <section class="statement" aria-labelledby="statement-title">
+        <div class="site-shell statement-inner">
+          <img class="statement-mark" src="assets/alexander-watson-submark.svg" width="2000" height="1890" alt="" aria-hidden="true" loading="lazy">
+          <h2 id="statement-title">Insight matters. But insight is not the same as change.</h2>
           <p>Counselling can create enough room to move beyond explaining yourself and begin noticing what happens between the explanation and the life you are actually living.</p>
         </div>
       </section>
@@ -157,27 +150,27 @@
       <section class="section approach" id="how-i-work" aria-labelledby="approach-title">
         <div class="site-shell approach-grid">
           <div class="sticky-heading">
-            <p class="eyebrow">How I work</p>
+            <p class="label">How I work</p>
             <h2 id="approach-title">Counselling that can think—and still stay human.</h2>
             <p class="section-intro">I bring attention, curiosity and honesty. Not a script. Not a performance of expertise. Not silence presented as depth.</p>
           </div>
 
           <div class="principles">
-            <article class="principle">
-              <span class="item-number" aria-hidden="true">01</span>
-              <div><h3>I listen for more than the polished version.</h3><p>You do not need to make your story coherent for me. We can notice the pauses, contradictions and changes in tone as well as the words themselves.</p></div>
+            <article>
+              <h3>I listen for more than the polished version.</h3>
+              <p>You do not need to make your story coherent for me. We can notice the pauses, contradictions and changes in tone as well as the words themselves.</p>
             </article>
-            <article class="principle">
-              <span class="item-number" aria-hidden="true">02</span>
-              <div><h3>I will offer something back.</h3><p>I am not there to nod through fifty minutes and leave you alone with the work. I ask careful questions, notice patterns and share what I am seeing.</p></div>
+            <article>
+              <h3>I will offer something back.</h3>
+              <p>I am not there to nod through fifty minutes and leave you alone with the work. I ask careful questions, notice patterns and share what I am seeing.</p>
             </article>
-            <article class="principle">
-              <span class="item-number" aria-hidden="true">03</span>
-              <div><h3>We will not rush to tidy things up.</h3><p>Understanding can take patience. I am willing to stay with uncertainty, complexity and difficult feelings without forcing a neat answer.</p></div>
+            <article>
+              <h3>We will not rush to tidy things up.</h3>
+              <p>Understanding can take patience. I am willing to stay with uncertainty, complexity and difficult feelings without forcing a neat answer.</p>
             </article>
-            <article class="principle">
-              <span class="item-number" aria-hidden="true">04</span>
-              <div><h3>You remain the authority on your life.</h3><p>I will not tell you who to become. We can test ideas together, but the meaning—and the choices that follow—need to belong to you.</p></div>
+            <article>
+              <h3>You remain the authority on your life.</h3>
+              <p>I will not tell you who to become. We can test ideas together, but the meaning—and the choices that follow—need to belong to you.</p>
             </article>
           </div>
         </div>
@@ -185,7 +178,7 @@
 
       <section class="fit-section" aria-labelledby="fit-title">
         <div class="site-shell fit-grid">
-          <div><p class="eyebrow eyebrow-light">A useful fit matters</p><h2 id="fit-title">This will not suit everyone.</h2></div>
+          <h2 id="fit-title">This will not suit everyone.</h2>
           <div class="fit-copy">
             <p>If you want a counsellor to give you a programme, tell you how to live or promise a rapid transformation, I may not be the right person.</p>
             <p>If you want a thoughtful relationship in which we can be warm, honest and curious without rushing towards an answer, we may work well together.</p>
@@ -202,30 +195,27 @@
           </figure>
 
           <div class="about-copy">
-            <p class="eyebrow">The person in the room</p>
+            <p class="label">About</p>
             <h2 id="about-title">Warm, direct and genuinely engaged.</h2>
             <p class="lead-copy">I listen carefully, think deeply and tend to notice the pattern underneath what is being said. I am willing to stay with a difficult conversation rather than tidy it up too quickly.</p>
             <p>I know what it can be like to process differently, monitor how you are coming across and be misunderstood despite trying very hard to be clear. I have ADHD, and that lived experience informs my sensitivity to difference without becoming a lens I impose on everyone.</p>
             <p>I will not assume that difference is a flaw to edit out—or that every part of your experience needs to be explained through a label. What matters is understanding how life is for you and what becomes possible when you no longer have to perform a more acceptable version of it.</p>
             <div class="training-note">
-              <img src="assets/alexander-watson-submark.svg" width="2000" height="1890" alt="" aria-hidden="true" loading="lazy">
-              <div>
-                <h3>Training and accountability</h3>
-                <p>I am a counsellor in training, working with adults through supervised client work in Greater Manchester. I am transparent about where I am professionally and take the responsibility of the work seriously.</p>
-              </div>
+              <h3>Training and accountability</h3>
+              <p>I am a counsellor in training, working with adults through supervised client work in Greater Manchester. I am transparent about where I am professionally and take the responsibility of the work seriously.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section class="practical section" id="practical" aria-labelledby="practical-title">
-        <div class="site-shell">
-          <div class="practical-heading">
-            <p class="eyebrow">The facts, plainly</p>
+        <div class="site-shell practical-grid">
+          <div class="sticky-heading">
+            <p class="label">Practical</p>
             <h2 id="practical-title">Clarity before you commit to anything.</h2>
             <p class="section-intro">An enquiry is simply a way to find out whether a conversation makes sense. It does not commit you to ongoing counselling.</p>
           </div>
-          <dl class="details-grid">
+          <dl class="details-list">
             <div><dt>Who I work with</dt><dd>Adults aged 18 and over</dd></div>
             <div><dt>Where</dt><dd>Greater Manchester and online</dd></div>
             <div><dt>Session length</dt><dd>50 minutes</dd></div>
@@ -238,18 +228,18 @@
 
       <section class="section faq-section" id="faqs" aria-labelledby="faq-title">
         <div class="site-shell faq-grid">
-          <div class="sticky-heading faq-heading">
-            <p class="eyebrow">Frequently asked questions</p>
+          <div class="sticky-heading">
+            <p class="label">Questions</p>
             <h2 id="faq-title">You are allowed to want the details.</h2>
             <p class="section-intro">Knowing how something works can make it easier to decide whether you want to begin.</p>
           </div>
           <div class="faq-list">
-            <details class="faq-item"><summary><span class="item-number" aria-hidden="true">01</span><span>Do I need a diagnosis—or a clear explanation of what is wrong?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>No. You can arrive with a diagnosis, a question, a complicated story or no clear explanation at all. We can begin with what feels most present and work from there.</p></details>
-            <details class="faq-item"><summary><span class="item-number" aria-hidden="true">02</span><span>Will you give me advice or tell me what to do?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>I will be active and honest, but I will not prescribe a life for you. I may ask a direct question, offer an observation or help you look at a choice from another angle. The decisions remain yours.</p></details>
-            <details class="faq-item"><summary><span class="item-number" aria-hidden="true">03</span><span>What happens in a first session?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>We will talk about what has brought you to counselling, what you hope might be different and what you need to know about working with me. It is also a chance to notice how the conversation feels. You do not have to commit to ongoing work on the spot.</p></details>
-            <details class="faq-item"><summary><span class="item-number" aria-hidden="true">04</span><span>What does ‘counsellor in training’ mean?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>I am completing professional counselling training and my client work is supervised. I am open about my stage of practice and take the ethical responsibility, preparation and reflection involved seriously.</p></details>
-            <details class="faq-item"><summary><span class="item-number" aria-hidden="true">05</span><span>Is counselling confidential?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>Counselling is private, with specific limits around serious safety concerns and legal requirements. I will explain confidentiality clearly before we begin so you know how information is handled and can ask questions.</p></details>
-            <details class="faq-item"><summary><span class="item-number" aria-hidden="true">06</span><span>How will I know if we are a useful fit?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>You do not need to decide from a polished biography. Notice whether the way I describe the work feels recognisable and whether you can imagine speaking honestly with me. An initial exchange and first session can help us both decide without pressure.</p></details>
+            <details class="faq-item"><summary><span>Do I need a diagnosis—or a clear explanation of what is wrong?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>No. You can arrive with a diagnosis, a question, a complicated story or no clear explanation at all. We can begin with what feels most present and work from there.</p></details>
+            <details class="faq-item"><summary><span>Will you give me advice or tell me what to do?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>I will be active and honest, but I will not prescribe a life for you. I may ask a direct question, offer an observation or help you look at a choice from another angle. The decisions remain yours.</p></details>
+            <details class="faq-item"><summary><span>What happens in a first session?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>We will talk about what has brought you to counselling, what you hope might be different and what you need to know about working with me. It is also a chance to notice how the conversation feels. You do not have to commit to ongoing work on the spot.</p></details>
+            <details class="faq-item"><summary><span>What does ‘counsellor in training’ mean?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>I am completing professional counselling training and my client work is supervised. I am open about my stage of practice and take the ethical responsibility, preparation and reflection involved seriously.</p></details>
+            <details class="faq-item"><summary><span>Is counselling confidential?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>Counselling is private, with specific limits around serious safety concerns and legal requirements. I will explain confidentiality clearly before we begin so you know how information is handled and can ask questions.</p></details>
+            <details class="faq-item"><summary><span>How will I know if we are a useful fit?</span><span class="faq-toggle" aria-hidden="true"></span></summary><p>You do not need to decide from a polished biography. Notice whether the way I describe the work feels recognisable and whether you can imagine speaking honestly with me. An initial exchange and first session can help us both decide without pressure.</p></details>
           </div>
         </div>
       </section>
@@ -257,7 +247,7 @@
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="site-shell contact-grid">
           <div class="contact-copy">
-            <p class="eyebrow eyebrow-light">Begin a conversation</p>
+            <p class="label label-light">Begin a conversation</p>
             <h2 id="contact-title">The first message can be unfinished.</h2>
             <p>Tell me what has prompted you to look for counselling, ask a practical question, or simply say that you are not sure where to begin.</p>
             <p>I will reply by email with current availability, the fee and what a first session would involve.</p>
@@ -265,10 +255,9 @@
           </div>
 
           <form class="enquiry-form" id="enquiry-form">
-            <div class="form-heading"><p class="eyebrow">A few sentences are enough</p><p>You do not need to tell your whole story here.</p></div>
             <div class="form-field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
             <div class="form-field"><label for="email">Your email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-            <div class="form-field"><label for="message">What would you like me to know? <span>(It can be unfinished.)</span></label><textarea id="message" name="message" required></textarea></div>
+            <div class="form-field"><label for="message">What would you like me to know? <span>A few sentences are enough, and they can be unfinished.</span></label><textarea id="message" name="message" required></textarea></div>
             <button class="button button-primary" type="submit">Prepare my email</button>
             <p class="form-note">This opens your own email app. Nothing entered here is sent to or stored by this website.</p>
             <p class="form-status" aria-live="polite"></p>
@@ -278,7 +267,10 @@
 
       <section class="urgent-support" id="urgent-support" aria-labelledby="support-title">
         <div class="site-shell support-grid">
-          <div><p class="eyebrow">Urgent support</p><h2 id="support-title">This practice is not a crisis service.</h2></div>
+          <div>
+            <p class="label">Urgent support</p>
+            <h2 id="support-title">This practice is not a crisis service.</h2>
+          </div>
           <div class="support-copy">
             <p>If you or someone else is in immediate danger, call 999 or go to A&amp;E. If you need urgent mental-health help, use NHS 111 online or call 111 and select the mental-health option.</p>
             <p>You can also call Samaritans free on 116 123 at any time.</p>
@@ -293,9 +285,11 @@
 
     <footer class="site-footer">
       <div class="site-shell">
-        <div class="footer-mark" aria-hidden="true"><img src="assets/alexander-watson-alternate-logo.svg" width="2000" height="500" alt="" loading="lazy"></div>
         <div class="footer-grid">
-          <div class="footer-intro"><p class="footer-statement">Thoughtful counselling for people who want to understand themselves without treating themselves like a problem to solve.</p></div>
+          <div class="footer-intro">
+            <div class="footer-mark" aria-hidden="true"><img src="assets/alexander-watson-alternate-logo.svg" width="2000" height="500" alt="" loading="lazy"></div>
+            <p class="footer-statement">Thoughtful counselling for people who want to understand themselves without treating themselves like a problem to solve.</p>
+          </div>
           <nav class="footer-column" aria-label="Footer navigation">
             <h2>Navigate</h2>
             <a href="#home">Home</a><a href="#is-this-you">Is this you?</a><a href="#how-i-work">How I work</a><a href="#about">About</a><a href="#practical">Practical information</a><a href="#faqs">Frequently asked questions</a>

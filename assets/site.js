@@ -24,6 +24,18 @@
     }
   });
 
+  // The header rule only appears once the page has moved, so the opening
+  // composition stays uninterrupted.
+  const header = document.querySelector(".site-header");
+
+  if (header) {
+    const setScrolled = () => {
+      header.dataset.scrolled = String(window.scrollY > 8);
+    };
+    setScrolled();
+    window.addEventListener("scroll", setScrolled, { passive: true });
+  }
+
   const form = document.querySelector("#enquiry-form");
   const status = form?.querySelector(".form-status");
 
